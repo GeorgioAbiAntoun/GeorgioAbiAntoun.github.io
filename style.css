@@ -60,6 +60,24 @@ body{
   color:#f15848;
 }
 
+.backgroundLine{
+  background: linear-gradient(180deg, rgba(0,0,0,0) calc(50% - 1px), rgba(32, 73, 65, 1) calc(50%), rgba(0,0,0,0) calc(50% + 1px) );
+}
+
+#leftButton{
+  display: grid;
+  align-self: center;
+  justify-content: left; 
+  padding-left: 0%;
+}
+
+#rightButton{
+  display: grid;
+  align-self: center;
+  justify-content: right; 
+  padding-right: 0%;
+}
+
 
 
 * { 
