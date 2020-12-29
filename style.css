@@ -17,9 +17,11 @@ body{
   background: #f1f1f1;
   text-align: center;
   padding: 50px 35px 10px 35px;
+  font-size: 1.3vw;
+
 }
 .container header{
-  font-size: 35px;
+  font-size: 2vw;
   font-weight: 600;
   margin: 0 0 30px 0;
 }
@@ -38,6 +40,7 @@ body{
   display: grid;
   align-self: center;
   justify-content: right;
+  padding-right: 7%;
 }
 
 .nextButton {
@@ -51,9 +54,7 @@ body{
   padding-top: 0.5%;
   padding-bottom: 0.5%;
   padding-left: 7%;
-  padding-right: 7%;
-
-  
+  padding-right: 7%;  
 }
 .nextButton:hover {
   background-color:#ffffff;
@@ -61,7 +62,7 @@ body{
 }
 
 .backgroundLine{
-  background: linear-gradient(180deg, rgba(0,0,0,0) calc(50% - 1px), rgba(32, 73, 65, 1) calc(50%), rgba(0,0,0,0) calc(50% + 1px) );
+  background: linear-gradient(180deg, rgba(0,0,0,0) calc(50% - 2px), rgba(32, 73, 65, 1) calc(50%), rgba(0,0,0,0) calc(50% + 2px) );
 }
 
 #leftButton{
@@ -84,3 +85,4 @@ body{
   outline: 1px solid red;
   outline-offset: -1px;
 }
+
