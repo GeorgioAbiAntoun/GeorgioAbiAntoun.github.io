@@ -50,7 +50,7 @@
                     <div class="col-4 desc">Breed</div>
                     <div class="col-7 p-2">
                         <select class="form-control">
-                            <option>Mixed Breed</option>
+                            <option><p id="selectingText">Mixed Breed</p></option>
                             <option>Golden Retriever</option>
                             <option>Husky</option>
                             <option>Bulldog</option>
@@ -77,8 +77,10 @@
                             
                             <div class="col-1 backgroundLine">
                             </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
                             <div class="col-4 backgroundLine">
-                                <label class="radio pt-2"><input type="radio" name="optradio"></label>
+                                <label class="radio pt-2"><input type="radio" name="optradio" checked></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
@@ -111,19 +113,95 @@
                 </div>
                 <div class="row">
                     <div class="col-4 desc">Your pet's birthday</div>
-                    <div class="col-3">Month</div>
-                    <div class="col-3">Year</div>
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <input class="form-control" style="text-align:center" type="text" placeholder="12">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 OrangeCaption">
+                                Month
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <input class="form-control" style="text-align:center" type="text" placeholder="2020">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 OrangeCaption">
+                                Year
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4 desc">What is your pet's weight?</div>
-                    <div class="col-8">W E I G H T</div>
+                    <div class="col-7 p-2">
+                        <select class="form-control">
+                            <option><p id="selectingText">Weight in lbs</p></option>
+                            <option>0-2</option>
+                            <option>2-4</option>
+                            <option>4-10</option>
+                            <option>10-20</option>
+                            <option>20-40</option>
+                            <option>40-80</option>
+                            <option>80+</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4 desc">Your pet's weight condition</div>
-                    <div class="col-8">C O N D I T I O N</div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-11">
+                                <img src="images/weight.svg" class="img-fluid" alt="dog">
+                            </div>
+                        </div>
+                        <div class="row ">
+
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1" id="rightButton">
+                                <label class="radio pt-2"><input type="radio" name="weightCondition"></label>
+                            </div>
+                            
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-4 backgroundLine">
+                                <label class="radio pt-2"><input type="radio" name="weightCondition" checked></label>
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine" id="rightButton">
+                                <label class="radio pt-2"><input type="radio" name="weightCondition"></label>
+                            </div>
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-4">
+                                skinny
+                            </div>
+                            <div class="col-4">
+                                just right
+                            </div>
+                            <div class="col-4">
+                                chubby
+                            </div>                            
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 p-3">
                         <button type="button" class="nextButton">Next</button>
                     </div>
                 </div>
@@ -133,15 +211,41 @@
                 </div>
                 <div class="row">
                     <div class="col-4 desc">How much treats does your pet get?</div>
-                    <div class="col-8">No treats Some treats Lots of treats</div>
+                    <div class="col-8">
+                        <div class="row">
+                            <div class="col-3">
+                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input class="toAlignCenter" type="radio" name="treatLevel">
+                                    <span class="pl-2">No treats</span>
+                                </label>
+                            </div>
+                            <div class="col-3">
+                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input class="toAlignCenter" type="radio" name="treatLevel" checked>
+                                    <span class="pl-2">Some treats</span>
+                                </label>                               
+                            </div>
+                            <div class="col-3">
+                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input class="toAlignCenter" type="radio" name="treatLevel">
+                                    <span class="pl-2">Lots of treats</span>
+                                </label>  
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-4 desc">Is your pet neutered?</div>
-                    <div class="col-2">Yes</div>
-                    <div class="col-2">No</div>
+                    <div class="col-2">
+                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input class="toAlignCenter" type="radio" name="neuteredFlag" checked>
+                            <span class="pl-2">Yes</span>
+                        </label>
+                    </div>
+                    <div class="col-2">
+                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input class="toAlignCenter" type="radio" name="neuteredFlag">
+                            <span class="pl-2">No</span> 
+                        </label>
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-12 p-3">
                         <button type="button" class="nextButton">Next</button>
                     </div>
                 </div>

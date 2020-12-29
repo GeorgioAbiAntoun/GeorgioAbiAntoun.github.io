@@ -18,6 +18,7 @@ body{
   text-align: center;
   padding: 50px 35px 10px 35px;
   font-size: 1.3vw;
+  font-weight: 1vw;
 
 }
 .container header{
@@ -35,12 +36,15 @@ body{
 }
 .OrangeCaption{
   color: #f15848 ;
+  font-size: 1vw;
+
 }
 .desc{
   display: grid;
   align-self: center;
   justify-content: right;
   padding-right: 7%;
+  white-space:nowrap;
 }
 
 .nextButton {
@@ -59,6 +63,10 @@ body{
 .nextButton:hover {
   background-color:#ffffff;
   color:#f15848;
+}
+.nextButton:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .backgroundLine{
