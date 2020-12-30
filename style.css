@@ -121,6 +121,10 @@ body{
   display: none;
 }
 
+#breedSize{
+  display: none;
+}
+
 
  /*For alignment debugging purposes*/
  

@@ -29,7 +29,6 @@ function animateFirstPage() {
   }
 }
 
-
 function hideSecondPage() {
 
   for (var i = 0; i < secondPage.length; i++) {
@@ -46,8 +45,6 @@ function animateSecondPage() {
     secondPage[i].classList.add("hide");
   }
 }
-
-
 
 function undoPage() {
 
@@ -70,3 +67,16 @@ async function animateRemoveSecond() {
   //console.log(slow) // 2. this runs 1 second after 1.
   hideSecondPage();
 }
+
+$(document).ready(function(){
+  $('#breedSelector').on('change', function() {
+    if ( this.value == 'MixedBreed')
+    {
+      document.getElementById("breedSize").style.display = "flex";
+    }
+    else  
+    {
+      document.getElementById("breedSize").style.display = "none";
+    }
+  });
+});

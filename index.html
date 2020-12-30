@@ -8,6 +8,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="magic-input.css">
 
     <title>Getting Started Flow</title>
 </head>
@@ -25,17 +26,22 @@
                     <div class="col-4 desc">I have a</div>
                     <div class="col-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
                     <div class="col-2 toAlignCenter">
-                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter" type="radio" id="maleDog"
-                                name="petType" value="maleDog" checked><span class="pl-2">male</span></label>
-                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter" type="radio" id="femaleDog"
-                                name="petType" value="femaleDog"><span class="pl-2">female</span></label>
+                        <label class="toPullLeft OrangeCaption">
+                            <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" id="maleDog" name="petType"
+                                value="maleDog" checked><span class="pl-2">male</span>
+                        </label>
+                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
+                                type="radio" id="femaleDog" name="petType" value="femaleDog"><span
+                                class="pl-2">female</span></label>
                     </div>
                     <div class="col-2 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat"></div>
                     <div class="col-2 toAlignCenter">
-                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter" type="radio" id="maleDog"
-                                name="petType" value="maleCat"><span class="pl-2">male</span></label>
-                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter" type="radio" id="femaleDog"
-                                name="petType" value="femaleCat"><span class="pl-2">female</span></label>
+                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
+                                type="radio" id="maleDog" name="petType" value="maleCat"><span
+                                class="pl-2">male</span></label>
+                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
+                                type="radio" id="femaleDog" name="petType" value="femaleCat"><span
+                                class="pl-2">female</span></label>
                     </div>
                 </div>
 
@@ -49,11 +55,10 @@
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-4 desc">Breed</div>
                     <div class="col-7 p-2">
-                        <select class="form-control">
-                            <option>
-                                <p id="selectingText">Mixed Breed</p>
-                            </option>
-                            <option>Golden Retriever</option>
+                        <select class="form-control" id="breedSelector">
+                            <option>Select Breed</option>
+                            <option value="MixedBreed">Mixed Breed</option>
+                            <option value="GoldenRetriever">Golden Retriever</option>
                             <option>Husky</option>
                             <option>Bulldog</option>
                             <option>Loulou</option>
@@ -61,7 +66,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="row  pt-1 pb-1 page1">
+                <div class="row  pt-1 pb-1 page1" id="breedSize">
                     <div class="col-4 desc">Breed size</div>
                     <div class="col-8">
                         <div class="row">
@@ -77,17 +82,20 @@
                             </div>
 
                             <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio pt-2"><input type="radio" name="optradio"></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="optradio"></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-4 backgroundLine">
-                                <label class="radio pt-2"><input type="radio" name="optradio" checked></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio" name="optradio"
+                                        checked></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio pt-2"><input type="radio" name="optradio"></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="optradio"></label>
                             </div>
                             <div class="col-1">
                             </div>
@@ -173,7 +181,8 @@
                             <div class="col-1">
                             </div>
                             <div class="col-1" id="rightButton">
-                                <label class="radio pt-2"><input type="radio" name="weightCondition"></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="weightCondition"></label>
                             </div>
 
                             <div class="col-1 backgroundLine">
@@ -181,12 +190,14 @@
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-4 backgroundLine">
-                                <label class="radio pt-2"><input type="radio" name="weightCondition" checked></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="weightCondition" checked></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio pt-2"><input type="radio" name="weightCondition"></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="weightCondition"></label>
                             </div>
                             <div class="col-1">
                             </div>
@@ -225,13 +236,15 @@
                             <div class="col-1">
                             </div>
                             <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio pt-2"><input type="radio" name="activityLevel"></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="activityLevel"></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
 
                             <div class="col-1 backgroundLine">
-                                <label class="radio pt-2"><input type="radio" name="activityLevel" checked></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="activityLevel" checked></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
@@ -239,17 +252,20 @@
 
                             </div>
                             <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio pt-2"><input type="radio" name="activityLevel" checked></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="activityLevel" checked></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine">
-                                <label class="radio pt-2"><input type="radio" name="activityLevel" checked></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="activityLevel" checked></label>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio pt-2"><input type="radio" name="activityLevel"></label>
+                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
+                                        name="activityLevel"></label>
                             </div>
                             <div class="col-1">
                             </div>
@@ -314,20 +330,21 @@
                         <div class="row">
                             <div class="col-3">
                                 <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter" type="radio" name="treatLevel">
-                                    <span class="pl-2">No treats</span>
+                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel">
+                                    No treats
                                 </label>
                             </div>
                             <div class="col-3">
                                 <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter" type="radio" name="treatLevel" checked>
-                                    <span class="pl-2">Some treats</span>
+                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel"
+                                        checked>
+                                    Some treats
                                 </label>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4">
                                 <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter" type="radio" name="treatLevel">
-                                    <span class="pl-2">Lots of treats</span>
+                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel">
+                                    Lots of treats
                                 </label>
                             </div>
                         </div>
@@ -336,14 +353,14 @@
                 <div class="row pt-1 pb-1 page3">
                     <div class="col-4 desc">Is your pet neutered?</div>
                     <div class="col-2">
-                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input class="toAlignCenter"
-                                type="radio" name="neuteredFlag" checked>
+                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
+                                class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag" checked>
                             <span class="pl-2">Yes</span>
                         </label>
                     </div>
                     <div class="col-2">
-                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input class="toAlignCenter"
-                                type="radio" name="neuteredFlag">
+                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
+                                class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag">
                             <span class="pl-2">No</span>
                         </label>
                     </div>
@@ -360,7 +377,7 @@
 
 </body>
 
-<script src="script.js"></script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -371,5 +388,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 </html>
