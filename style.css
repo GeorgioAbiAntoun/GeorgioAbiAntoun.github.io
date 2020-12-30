@@ -97,9 +97,15 @@ body{
 .regCaption{
   font-size: 0.9vw;
   white-space:nowrap;
-  
 }
 
+
+.page2{
+  display: none;
+}
+.page3{
+  display: none;
+}
  /*For alignment debugging purposes*/
  
 /*
