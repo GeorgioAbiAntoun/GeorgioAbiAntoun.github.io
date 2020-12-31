@@ -186,11 +186,11 @@ input[type="radio"].mgr:focus {
 }
 
 input[type="radio"].mgr:checked {
-	border: 1px solid #487f74;
+	border: 1px solid #708985;
 }
 
 input[type="radio"].mgr:checked:before {
-	background-color: #487f74
+	background-color: #708985;
 }
 
 .mgr-primary {

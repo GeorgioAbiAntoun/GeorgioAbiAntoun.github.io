@@ -68,6 +68,7 @@ async function animateRemoveSecond() {
   hideSecondPage();
 }
 
+//Hide/show the breed size selector based if the user selects Mixed Breed or not
 $(document).ready(function(){
   $('#breedSelector').on('change', function() {
     if ( this.value == 'MixedBreed')

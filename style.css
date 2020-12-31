@@ -16,14 +16,14 @@ body{
   width: 100%;
   background: #f1f1f1;
   text-align: center;
-  padding: 50px 35px 10px 35px;
+  padding: 20px 35px 10px 35px;
   font-size: 1.3vw;
-  font-weight: 1vw;
+  font-weight: 650;
 
 }
 .container header{
   font-size: 2vw;
-  font-weight: 600;
+  font-weight: 700;
   margin: 0 0 20px 0;
 }
 .toAlignCenter{
@@ -51,6 +51,7 @@ body{
   align-self: center;
   justify-content: right;
   padding-right: 7%;
+  padding-bottom: 2%;
   white-space:nowrap;
 }
 
@@ -123,6 +124,11 @@ body{
 
 #breedSize{
   display: none;
+}
+
+#logo{
+  width: 7%;
+  height: 7%;
 }
 
 
