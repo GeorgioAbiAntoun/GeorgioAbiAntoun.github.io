@@ -3,140 +3,94 @@
 
 <head>
     <meta charset="utf-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="magic-input.css">
+
     <title>Getting Started Flow</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="style2.css">
 </head>
 
+
 <body>
-    <div class="container" id="gettingStartedForm">
-        <header>Tell us more about your pet</header>
-       
-        <!--  <div class="progress-bar"> 
-            <div class="step">
-                <p>
-                    Name</p>
-                <div class="bullet">
-                    <span>1</span>
-                </div>
-                <div class="check fas fa-check">
-                </div>
-            </div>
-            <div class="step">
-                <p>
-                    Contact</p>
-                <div class="bullet">
-                    <span>2</span>
-                </div>
-                <div class="check fas fa-check">
-                </div>
-            </div>
-            <div class="step">
-                <p>
-                    Birth</p>
-                <div class="bullet">
-                    <span>3</span>
-                </div>
-                <div class="check fas fa-check">
-                </div>
-            </div>
-            <div class="step">
-                <p>
-                    Submit</p>
-                <div class="bullet">
-                    <span>4</span>
-                </div>
-                <div class="check fas fa-check">
-                </div>
-            </div>
-        </div>-->
-        
-        <div class="form-outer">
-            <form action="#">
-                <div class="page slide-page">
-                    <!-- <div class="title">
-                        Basic Info:</div> -->
-                    <div class="field">
-                        <div class="label">
-                            First Name</div>
-                        <input type="text">
+
+    <img id="logo" src="images/logo.svg" class="img-fluid ml-2 mt-2" alt="logo">
+
+    <div class="container">
+
+        <header class="mb-0"> Now tell us about yourself!</header>
+
+        <div class="container pt-0 OrangeCaptionSmall">
+            <span>Already have an account?</span>
+            <a href="#" id="BoldLink">Login</a>
+        </div>
+
+        <form>
+            <div class="container mt-1">
+                <div class="row pt-1 pb-1">
+                    <div class="col-2">
                     </div>
-                    <div class="field">
-                        <div class="label">
-                            Last Name</div>
-                        <input type="text">
+                    <div class="col-4" id="firstName">
+                        <input class="form-control" type="text" placeholder="First Name">
                     </div>
-                    <div class="field">
-                        <button class="firstNext next badge badge-pill">Next</button>
+                    <div class="col-4" id="lastName">
+                        <input class="form-control" type="text" placeholder="Last Name">
+                    </div>
+                    <div class="col-2">
+                    </div>
+                    
+                </div>
+                <div class="row pt-1 pb-1">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-8">
+                        <input class="form-control" type="text" placeholder="Email address">
+                    </div>
+                    <div class="col-2">
                     </div>
                 </div>
-                <div class="page">
-                   <!--  <div class="title">
-                        Contact Info:</div> -->
-                    <div class="field">
-                        <div class="label">
-                            Email Address</div>
-                        <input type="text">
+                <div class="row pt-1 pb-1">
+                    <div class="col-2">
                     </div>
-                    <div class="field">
-                        <div class="label">
-                            Phone Number</div>
-                        <input type="Number">
+                    <div class="col-8">
+                        <input class="form-control" type="text" placeholder="Phone number">
                     </div>
-                    <div class="field btns">
-                        <!-- <button class="prev-1 prev">Previous</button> -->
-                        <button class="next-1 next badge badge-pill">Next</button>
+                    <div class="col-2">
                     </div>
                 </div>
-                <div class="page">
-                    <!-- <div class="title">
-                        Date of Birth:</div> -->
-                    <div class="field">
-                        <div class="label">
-                            Date</div>
-                        <input type="text">
+                <div class="row pt-1 pb-1">
+                    <div class="col-2">
                     </div>
-                    <div class="field">
-                        <div class="label">
-                            Gender</div>
-                        <select>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
+                    <div class="col-8">
+                        <input class="form-control" type="text" placeholder="Password">
                     </div>
-                    <div class="field btns">
-                        <!-- <button class="prev-2 prev">Previous</button> -->
-                        <!-- <button class="next-2 next">Next</button> -->
-                        <button class="submit">Next</button>
+                    <div class="col-2">
                     </div>
                 </div>
 
-                <!-- <div class="page">
-                    <div class="title">
-                        Login Details:</div>
-                    <div class="field">
-                        <div class="label">
-                            Username</div>
-                        <input type="text">
-                    </div>
-                    <div class="field">
-                        <div class="label">
-                            Password</div>
-                        <input type="password">
-                    </div>
-                    <div class="field btns">
-                        <button class="prev-3 prev">Previous</button>
-                        <button class="submit">Submit</button>
-                    </div>
-                </div> -->
-            
-            </form>
-        </div>
+                <div class="col-12 p-3">
+                    <button onclick="document.location='index.html'"  type="button" class="nextButton">Next</button>
+                </div>
+            </div>
+        </form>
+
     </div>
 
-    <script src="script.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
 
 </html>

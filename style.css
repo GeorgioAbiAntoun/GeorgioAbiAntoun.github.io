@@ -131,6 +131,20 @@ body{
   height: 7%;
 }
 
+#firstName{
+  padding-right: 0.75%;
+}
+
+#lastName{
+  padding-left: 0.75%;
+}
+
+#BoldLink{
+  color: #f15848;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 
  /*For alignment debugging purposes*/
  

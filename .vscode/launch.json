@@ -8,7 +8,7 @@
             "type": "pwa-chrome",
             "request": "launch",
             "name": "Open index.html",
-            "file": "c:\\Users\\georg\\Desktop\\PawPots\\Web\\index.html"
+            "file": "c:\\Users\\georg\\Desktop\\PawPots\\Web\\index2.html"
         }
     ]
 }
