@@ -25,9 +25,9 @@
         <form>
             <div class="container pt-1">
                 <div class="row pt-1 pb-1 page1">
-                    <div class="col-lg-4 col-sm-12 desc">I have a</div>
-                    <div class="col-lg-2 col-sm-4 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
-                    <div class="col-lg-2 col-sm-4 toAlignCenter">
+                    <div class="col-md-4 desc">I have a</div>
+                    <div class="col-md-2 col-xs-3 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
+                    <div class="col-md-2 col-xs-3 toAlignCenter">
                         <label class="toPullLeft OrangeCaption">
                             <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" id="maleDog" name="petType"
                                 value="maleDog" checked><span class="pl-2">male</span>
@@ -36,8 +36,8 @@
                                 type="radio" id="femaleDog" name="petType" value="femaleDog"><span
                                 class="pl-2">female</span></label>
                     </div>
-                    <div class="col-lg-2 col-sm-4 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat"></div>
-                    <div class="col-lg-2 col-sm-4 toAlignCenter">
+                    <div class="col-md-2 col-xs-3 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat"></div>
+                    <div class="col-md-2 col-xs-3 toAlignCenter">
                         <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
                                 type="radio" id="maleDog" name="petType" value="maleCat"><span
                                 class="pl-2">male</span></label>
@@ -47,30 +47,30 @@
                     </div>
                 </div>
 
-                <div class="row col-sm-12 col-lg-pt-1 pb-1 page1">
-                    <div class="col-lg-4 col-sm-12  desc">Your pet's name</div>
-                    <div class="col-lg-7 col-sm-12  p-2">
-                        <input class="form-control" type="text" placeholder=" Pet's Name">
+                <div class="row pt-1 pb-1 page1">
+                    <div class="col-4 desc">Your pet's name</div>
+                    <div class="col-7 p-2">
+                        <input class="form-control" id="petName" type="text" placeholder=" Pet's Name">
                     </div>
                 </div>
 
-                <div class="row  col-sm-12 pt-1 pb-1 page1">
-                    <div class="col-4  col-sm-12 desc">Breed</div>
-                    <div class="col-7 col-sm-12 p-2">
+                <div class="row pt-1 pb-1 page1">
+                    <div class="col-4 desc">Breed</div>
+                    <div class="col-7 p-2">
                         <select class="form-control" id="breedSelector">
-                            <option>Select Breed</option>
+                            <option value="SelectBreed">Select Breed</option>
                             <option value="MixedBreed">Mixed Breed</option>
                             <option value="GoldenRetriever">Golden Retriever</option>
-                            <option>Husky</option>
-                            <option>Bulldog</option>
-                            <option>Loulou</option>
-                            <option>Golden Shepherd</option>
+                            <option value="Husky">Husky</option>
+                            <option value="Bulldog">Bulldog</option>
+                            <option value="Loulou">Loulou</option>
+                            <option value="GoldenShepherd">Golden Shepherd</option>
                         </select>
                     </div>
                 </div>
-                <div class="row col-sm-12  pt-1 pb-1 page1" id="breedSize">
-                    <div class="col-4 col-sm-12  desc">Breed size</div>
-                    <div class="col-8 col-sm-12 ">
+                <div class="row  pt-1 pb-1 page1" id="breedSize">
+                    <div class="col-4 desc">Breed size</div>
+                    <div class="col-8">
                         <div class="row">
                             <div class="col-11">
                                 <img src="images/breed_size_cropped_nose.svg" class="img-fluid" alt="dog">
@@ -123,7 +123,7 @@
                 </div>
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-12 p-3">
-                        <button onclick="animateRemoveFirst()" type="button" class="nextButton">Next</button>
+                        <button onclick="animateRemoveFirst()" id="next1" type="button" class="nextButton">Next</button>
                     </div>
                 </div>
                 <div class="row pt-5 pb-1 page2">
@@ -131,7 +131,8 @@
                     <div class="col-2">
                         <div class="row">
                             <div class="col-12 pl-2">
-                                <input class="form-control" style="text-align:center" type="text" placeholder="12">
+                                <input class="form-control" id="month" style="text-align:center" type="number"
+                                    placeholder="12" min="1" max="12">
                             </div>
                         </div>
                         <div class="row pt-1">
@@ -143,7 +144,8 @@
                     <div class="col-2">
                         <div class="row">
                             <div class="col-12 pl-0">
-                                <input class="form-control" style="text-align:center" type="text" placeholder="2020">
+                                <input class="form-control" id="year" style="text-align:center" type="number"
+                                    placeholder="2020" min="1990" max="2021">
                             </div>
                         </div>
                         <div class="row pt-1">
@@ -156,17 +158,15 @@
                 <div class="row pt-1 pb-1 page2">
                     <div class="col-4 desc">What is your pet's weight?</div>
                     <div class="col-6 p-2">
-                        <select class="form-control">
-                            <option>
-                                <p id="selectingText">Weight in lbs</p>
-                            </option>
-                            <option>0-2</option>
-                            <option>2-4</option>
-                            <option>4-10</option>
-                            <option>10-20</option>
-                            <option>20-40</option>
-                            <option>40-80</option>
-                            <option>80+</option>
+                        <select class="form-control" id="weightSelector">
+                            <option value="WeightInLbs">Weight in lbs</option>
+                            <option value="0-2">0-2</option>
+                            <option value="2-4">2-4</option>
+                            <option value="4-10">4-10</option>
+                            <option value="10-20">10-20</option>
+                            <option value="20-40">20-40</option>
+                            <option value="40-80">40-80</option>
+                            <option value="80+">80+</option>
                         </select>
                     </div>
                 </div>
