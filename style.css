@@ -16,9 +16,10 @@ body{
   width: 100%;
   background: #f1f1f1;
   text-align: center;
-  padding: 20px 35px 10px 35px;
+  padding: 0% 0% 0% 0%;
   font-size: 1.3vw;
   font-weight: 650;
+  margin: 0% auto 0% auto;
 
 }
 .container header{
@@ -131,18 +132,30 @@ body{
   height: 7%;
 }
 
-#firstName{
-  padding-right: 0.75%;
+.form-control {
+  
+  height: 100%;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 100%;
+
 }
 
-#lastName{
-  padding-left: 0.75%;
+
+
+@media (max-width: 768px){
+  .container {
+    max-width: 100%;
+}
 }
 
-#BoldLink{
-  color: #f15848;
-  text-decoration: none;
-  font-weight: 600;
+
+@media (max-width: 576px){
+
+  .container {
+    max-width: 100%;
+}
+
 }
 
 
