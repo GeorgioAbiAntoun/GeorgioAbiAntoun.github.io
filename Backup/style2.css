@@ -12,40 +12,27 @@ body{
   align-items: center;
   justify-content: center;
 }
-
 .container{
   width: 100%;
   background: #f1f1f1;
   text-align: center;
   padding: 0% 0% 0% 0%;
+  margin: 0% auto 0% auto;
   font-size: 1.3vw;
   font-weight: 650;
-  margin: 0% auto 0% auto;
+  max-width: 100%;
 
 }
 .container header{
   font-size: 2vw;
   font-weight: 700;
-  margin: 0 0 20px 0;
+  margin: 0% 0% 0% 0%;
 }
-.toAlignCenter{
-  align-self: center;
-}
+
 .toPullLeft{
   display: flex;
   align-self: center;
   justify-content: left;
-}
-.OrangeCaption{
-  color: #f15848 ;
-  font-size: 1vw;
-  
-}
-.OrangeCaptionSmall{
-  color: #f15848 ;
-  font-size: 0.75vw;
-  font-weight: 500;
-  white-space:nowrap;
 }
 
 .desc{
@@ -79,60 +66,30 @@ body{
   box-shadow: none;
 }
 
-.backgroundLine{
-  background: linear-gradient(180deg, rgba(0,0,0,0) calc(50% - 2px), rgba(32, 73, 65, 1) calc(50%), rgba(0,0,0,0) calc(50% + 2px) );
-}
-
-#leftButton{
-  display: grid;
-  align-self: center;
-  align-content: center;
-  justify-content: left; 
-  padding-left: 0%;
-}
-
-#rightButton{
-  display: grid;
-  align-self: center;
-  align-content: center;
-  justify-content: right; 
-  padding-right: 0%;
-}
-
-.regCaption{
-  font-size: 0.9vw;
+.OrangeCaptionSmall{
+  color: #f15848 ;
+  font-size: 0.75vw;
+  font-weight: 500;
   white-space:nowrap;
-}
-
-.page1{
-  opacity: 1;
-  transition: opacity .6s;
-}
-
-.page1.hide{
-  opacity: 0;
-}
-.page2{
-  display: none;
-  opacity: 1;
-  transition: opacity .6s;
-}
-
-.page2.hide{
-  opacity: 0;
-}
-
-.page3{
-  display: none;
-}
-
-#breedSize{
-  display: none;
 }
 
 #logo{
   width: 7%;
   height: 7%;
+}
+
+#firstName{
+  padding-right: 0.75%;
+}
+
+#lastName{
+  padding-left: 0.75%;
+}
+
+#BoldLink{
+  color: #f15848;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .form-control {
@@ -162,8 +119,6 @@ body{
     padding: 0 auto;
     font-size: 3.5vw;
     font-weight: 550;
-
-  
   }
 
   .container header{
@@ -193,8 +148,21 @@ body{
 
   .OrangeCaption{
     color: #f15848 ;
-    font-size: 2.5vw;
+    font-size: 1.5vw;
     
+  }
+
+  .OrangeCaptionSmall{
+    color: #f15848 ;
+    font-size: 2.65vw;
+    font-weight: 500;
+    white-space:nowrap;
+  }
+
+  #BoldLink{
+    color: #f15848;
+    text-decoration: none;
+    font-weight: 600;
   }
 
 }

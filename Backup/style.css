@@ -12,7 +12,6 @@ body{
   align-items: center;
   justify-content: center;
 }
-
 .container{
   width: 100%;
   background: #f1f1f1;
@@ -86,7 +85,6 @@ body{
 #leftButton{
   display: grid;
   align-self: center;
-  align-content: center;
   justify-content: left; 
   padding-left: 0%;
 }
@@ -94,7 +92,6 @@ body{
 #rightButton{
   display: grid;
   align-self: center;
-  align-content: center;
   justify-content: right; 
   padding-right: 0%;
 }
@@ -145,6 +142,23 @@ body{
 }
 
 
+
+@media (max-width: 768px){
+  .container {
+    max-width: 100%;
+}
+}
+
+
+@media (max-width: 576px){
+
+  .container {
+    max-width: 100%;
+}
+
+}
+
+
  /*For alignment debugging purposes*/
  
 /*
@@ -153,57 +167,3 @@ body{
   outline-offset: -1px;
 }
 */
-
-@media only screen and (max-width: 768px){
-
-  .container{
-    background: #f1f1f1;
-    text-align: center;
-    padding: 0 auto;
-    font-size: 3.5vw;
-    font-weight: 550;
-
-  
-  }
-
-  .container header{
-    font-size: 4.5vw;
-    font-weight: 700;
-  }
-
-  .desc{
-
-    display: grid;
-    align-self: center;
-    justify-content: center;
-    padding-right: 7%;
-    padding-bottom: 2%;
-    padding-top: 3%;
-    white-space:nowrap;
-  }
-
-  .form-control {
-  
-    height: 100%;
-    font-size: 100%;
-    font-weight: 400;
-    line-height: 80%;
-  
-  }
-
-  .OrangeCaption{
-    color: #f15848 ;
-    font-size: 2.5vw;
-    
-  }
-
-}
-
-@media only screen and (max-width: 576px){
-
-  .container{
-    padding: 0 2%;
-   
-  }
-
-}
