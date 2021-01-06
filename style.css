@@ -197,6 +197,14 @@ body{
     
   }
 
+  #no{
+    justify-content: center;
+  }
+
+  #yes{
+    justify-content: center;
+  }
+
 }
 
 @media only screen and (max-width: 576px){
