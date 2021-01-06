@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  background: #f1f1f1 ;
+  color: #204941;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  width: 100%;
+  background: #f1f1f1;
+  text-align: center;
+  padding: 0% 0% 0% 0%;
+  font-size: 1.3vw;
+  font-weight: 650;
+  margin: 0% auto 0% auto;
+
+}
+.container header{
+  font-size: 2vw;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+.toAlignCenter{
+  align-self: center;
+}
+.toPullLeft{
+  display: flex;
+  align-self: center;
+  justify-content: left;
+}
+.OrangeCaption{
+  color: #f15848 ;
+  font-size: 1vw;
+  
+}
+.OrangeCaptionSmall{
+  color: #f15848 ;
+  font-size: 0.75vw;
+  font-weight: 500;
+  white-space:nowrap;
+}
+
+.desc{
+  display: grid;
+  align-self: center;
+  justify-content: right;
+  padding-right: 7%;
+  padding-bottom: 2%;
+  white-space:nowrap;
+}
+
+.nextButton {
+	background-color:#f15848;
+	border-radius:28px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:"Poppins";
+	font-size:17px;
+  border:1px solid #f15848;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  padding-left: 7%;
+  padding-right: 7%;  
+}
+.nextButton:hover {
+  background-color:#ffffff;
+  color:#f15848;
+}
+.nextButton:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.backgroundLine{
+  background: linear-gradient(180deg, rgba(0,0,0,0) calc(50% - 2px), rgba(32, 73, 65, 1) calc(50%), rgba(0,0,0,0) calc(50% + 2px) );
+}
+
+#leftButton{
+  display: grid;
+  align-self: center;
+  align-content: center;
+  justify-content: left; 
+  padding-left: 0%;
+}
+
+#rightButton{
+  display: grid;
+  align-self: center;
+  align-content: center;
+  justify-content: right; 
+  padding-right: 0%;
+}
+
+.regCaption{
+  font-size: 0.9vw;
+  white-space:nowrap;
+}
+
+.page1{
+  opacity: 1;
+  transition: opacity .6s;
+}
+
+.page1.hide{
+  opacity: 0;
+}
+.page2{
+  display: none;
+  opacity: 1;
+  transition: opacity .6s;
+}
+
+.page2.hide{
+  opacity: 0;
+}
+
+.page3{
+  display: none;
+}
+
+#breedSize{
+  display: none;
+}
+
+#logo{
+  width: 7%;
+  height: 7%;
+}
+
+.form-control {
+  
+  height: 100%;
+  font-size: 100%;
+  font-weight: 400;
+  line-height: 100%;
+
+}
+
+
+ /*For alignment debugging purposes*/
+ 
+/*
+ * {
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+*/
+
+@media only screen and (max-width: 768px){
+
+  .container{
+    background: #f1f1f1;
+    text-align: center;
+    padding: 0 auto;
+    font-size: 3.5vw;
+    font-weight: 550;
+
+  
+  }
+
+  .container header{
+    font-size: 4.5vw;
+    font-weight: 700;
+  }
+
+  .desc{
+
+    display: grid;
+    align-self: center;
+    justify-content: center;
+    padding-right: 7%;
+    padding-bottom: 2%;
+    padding-top: 3%;
+    white-space:nowrap;
+  }
+
+  .form-control {
+  
+    height: 100%;
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 80%;
+  
+  }
+
+  .OrangeCaption{
+    color: #f15848 ;
+    font-size: 2.5vw;
+    
+  }
+
+}
+
+@media only screen and (max-width: 576px){
+
+  .container{
+    padding: 0 2%;
+   
+  }
+
+}
