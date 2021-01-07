@@ -27,7 +27,7 @@
         <form>
             <div class="container pt-1">
                 <div class="row pt-1 pb-1 page1">
-                    <div class="col-md-4 desc">I have a</div>
+                    <div class="col-md-4 desc"><span>I have a</span></div>
                     <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
                     <div class="col-3 col-md-2 toAlignCenter">
                         <label class="toPullLeft OrangeCaption">
@@ -60,7 +60,7 @@
                     <div class="col-12 col-md-4 desc">Breed</div>
                     <div class="col-12 col-md-7 p-2">
                         <select class="form-control" id="breedSelector">
-                            <option value="SelectBreed">Select Breed</option>
+                            <option selected disabled value="SelectBreed">Select Breed</option>
                             <option value="MixedBreed">Mixed Breed</option>
                             <option value="GoldenRetriever">Golden Retriever</option>
                             <option value="Husky">Husky</option>
@@ -130,8 +130,21 @@
                     </div>
                 </div>
                 <div class="row pt-5 pb-1 page2">
-                    <div class="col-12 col-md-4 desc">Your pet's birthday</div>
-                    <div class="col-6 col-md-2">
+                    <div class="col-12 col-md-4 desc changeName">Your pet's birthday</div>
+                    <div class="col-4 col-md-2">
+                        <div class="row">
+                            <div class="col-12 pl-2">
+                                <input class="form-control" id="day" style="text-align:center" type="number"
+                                    placeholder="1" min="1" max="31" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="row pt-1">
+                            <div class="col-12 OrangeCaption">
+                                Day
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
                         <div class="row">
                             <div class="col-12 pl-2">
                                 <input class="form-control" id="month" style="text-align:center" type="number"
@@ -139,12 +152,12 @@
                             </div>
                         </div>
                         <div class="row pt-1">
-                            <div class="col-12 OrangeCaptionSmall">
+                            <div class="col-12 OrangeCaption">
                                 Month
                             </div>
                         </div>
                     </div>
-                    <div class="col-6 col-md-2">
+                    <div class="col-4 col-md-2">
                         <div class="row">
                             <div class="col-12 pl-0">
                                 <input class="form-control" id="year" style="text-align:center" type="number"
@@ -152,17 +165,17 @@
                             </div>
                         </div>
                         <div class="row pt-1">
-                            <div class="col-12 OrangeCaptionSmall">
+                            <div class="col-12 OrangeCaption">
                                 Year
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page2">
-                    <div class="col-12 col-md-4 desc">What is your pet's weight?</div>
+                    <div class="col-12 col-md-4 desc changeName">What is your pet's weight?</div>
                     <div class="col-12 col-md-6 p-2">
                         <select class="form-control" id="weightSelector">
-                            <option value="WeightInLbs">Weight in lbs</option>
+                            <option value="WeightInKgs">Weight in Kgs</option>
                             <option value="0-2">0-2</option>
                             <option value="2-4">2-4</option>
                             <option value="4-10">4-10</option>
@@ -174,7 +187,7 @@
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page2">
-                    <div class="col-12 col-md-4 desc">Your pet's weight condition</div>
+                    <div class="col-12 col-md-4 desc changeName">Your pet's weight condition</div>
                     <div class="col-12 col-md-8">
                         <div class="row">
                             <div class="col-11">
@@ -229,7 +242,7 @@
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page3">
-                    <div class="col-12 col-md-4 desc">Your Pet's activity level</div>
+                    <div class="col-12 col-md-4 desc changeName">Your Pet's activity level</div>
                     <div class="col-12 col-md-8">
                         <div class="row">
                             <div class="col-12 pl-0 pr-0">
@@ -277,19 +290,19 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-2 regCaption">
+                            <div class="col-2 regCaption" id="activityLevel">
                                 couch potato
                             </div>
-                            <div class="col-3 regCaption">
+                            <div class="col-3 regCaption" id="activityLevel">
                                 somewhat active
                             </div>
-                            <div class="col-2 regCaption">
+                            <div class="col-2 regCaption" id="activityLevel">
                                 active
                             </div>
-                            <div class="col-3 regCaption">
+                            <div class="col-3 regCaption" id="activityLevel">
                                 very active
                             </div>
-                            <div class="col-2 regCaption">
+                            <div class="col-2 regCaption" id="activityLevel">
                                 energy ball
                             </div>
                         </div>
@@ -330,7 +343,7 @@
                     </div>
                 </div>
                 <div class="row pt-3 pb-1 page3">
-                    <div class="col-12 col-md-4 desc">How much treats does your pet get?</div>
+                    <div class="col-12 col-md-4 desc changeName">How much treats does your pet get?</div>
                     <div class="col-12 col-md-8">
                         <div class="row">
                             <div class="col-4 col-md-3">
@@ -356,7 +369,7 @@
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page3">
-                    <div class="col-12 col-md-4 desc">Is your pet neutered?</div>
+                    <div class="col-12 col-md-4 desc changeName">Is your pet neutered?</div>
                     <div class="col-6 col-md-2">
                         <label class="radio toPullLeft pt-2" id="yes" style="white-space:nowrap"><input
                                 class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag" checked>

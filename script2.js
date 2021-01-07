@@ -13,3 +13,18 @@ function validatePassword(){
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
+
+//Hide placeholder when user clicks on input field
+$(function(){
+  $.each($('input'), function(index, value) {
+   $(this).data('holder', $(this).attr('placeholder'));
+ });
+
+   $('input').focusin(function(){
+       $(this).attr('placeholder','');
+   });
+
+   $('input').focusout(function(){
+       $(this).attr('placeholder', $(this).data('holder'));
+   });
+})
