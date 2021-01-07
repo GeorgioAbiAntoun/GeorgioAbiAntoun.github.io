@@ -74,8 +74,10 @@ body{
 }
 
 #logo{
-  width: 7%;
-  height: 7%;
+  width: 12%;
+  height: 12%;
+  max-width: 220px;
+  max-height: 150px;
 }
 
 #firstName{
@@ -131,6 +133,15 @@ body{
 }
 */
 
+@media only screen and (max-width: 960px){
+
+  #logo{
+    width: 15%;
+    height: 15%;
+  }
+
+}
+
 @media only screen and (max-width: 768px){
 
   .container{
@@ -185,6 +196,11 @@ body{
     font-weight: 600;
   }
 
+  #logo{
+    width: 18%;
+    height: 18%;
+  }
+
 }
 
 @media only screen and (max-width: 576px){
@@ -197,6 +213,11 @@ body{
   .container header{
 
     font-weight: 600;
+  }
+
+  #logo{
+    width: 19%;
+    height:19%;
   }
 
 }
