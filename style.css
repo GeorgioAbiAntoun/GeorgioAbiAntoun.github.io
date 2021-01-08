@@ -118,7 +118,7 @@ body{
   transition: opacity .6s;
 }
 
-/* .page1.hide{
+.page1.hide{
   opacity: 0;
 }
 .page2{
@@ -133,7 +133,7 @@ body{
 
 .page3{
   display: none;
-} */
+}
 
 #breedSize{
   display: none;
