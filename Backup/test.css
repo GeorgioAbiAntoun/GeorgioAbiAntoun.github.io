@@ -46,14 +46,13 @@ body{
   font-size: 0.75vw;
   font-weight: 500;
   white-space:nowrap;
-}
+} 
 
 .desc{
   display: grid;
   align-self: center;
   justify-content: right;
   padding-right: 7%;
-  padding-bottom: 2%;
   white-space:nowrap;
 }
 
@@ -99,9 +98,19 @@ body{
   padding-right: 0%;
 }
 
+.radioLeft{
+  text-align: left;
+  padding: 0;
+}
+.radioRight{
+  text-align: right;
+  padding: 0;
+}
+
 .regCaption{
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   white-space:nowrap;
+  align-self: center;
 }
 
 .page1{
@@ -109,7 +118,7 @@ body{
   transition: opacity .6s;
 }
 
-.page1.hide{
+/* .page1.hide{
   opacity: 0;
 }
 .page2{
@@ -124,15 +133,17 @@ body{
 
 .page3{
   display: none;
-}
+} */
 
 #breedSize{
   display: none;
 }
 
 #logo{
-  width: 7%;
-  height: 7%;
+  width: 12%;
+  height: 12%;
+  max-width: 220px;
+  max-height: 150px;
 }
 
 .form-control {
@@ -144,15 +155,70 @@ body{
 
 }
 
+.treatCaption{
+  text-align: left;
+  align-self: center;
+  white-space:nowrap;
+  font-size: 0.9vw;
+}
+
+#activityLevel{
+  font-size: 1vw;
+}
+
+/*Change the glow color from blue to orange*/ 
+.form-control:focus {
+  border-color: #f15848;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(241, 88, 72, 0.6);
+}
+
+/*Make the placeholder text lighter in color so that users know to fill it*/
+
+.form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  opacity: 0.8; /* Firefox */
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  opacity: 0.8;
+}
+
+.form-control::-ms-input-placeholder { /* Microsoft Edge */
+  opacity: 0.8;
+}
+
+
 
  /*For alignment debugging purposes*/
  
-/*
+/* 
  * {
   outline: 1px solid red;
   outline-offset: -1px;
 }
-*/
+ */
+
+ input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 960px){
+
+  #logo{
+    width: 15%;
+    height: 15%;
+  }
+
+  #activityLevel{
+    font-size: 1vw;
+  }
+
+  .treatCaption{
+    font-size: 1.4vw;
+  }
+
+}
+
 
 @media only screen and (max-width: 768px){
 
@@ -169,6 +235,8 @@ body{
   .container header{
     font-size: 4.5vw;
     font-weight: 700;
+    margin-top: 6%;
+    margin-bottom: 0px;
   }
 
   .desc{
@@ -197,6 +265,39 @@ body{
     
   }
 
+  .OrangeCaptionSmall{
+    color: #f15848 ;
+    font-size: 1.2vw;
+    font-weight: 500;
+    white-space:nowrap;
+  }
+
+  .regCaption{
+    font-size: 2vw;
+    white-space:initial;
+  }
+
+  #no{
+    justify-content: center;
+  }
+
+  #yes{
+    justify-content: center;
+  }
+
+  #logo{
+    width: 18%;
+    height: 18%;
+  }
+
+  #activityLevel{
+    font-size: 1.5vw;
+  }
+
+  .treatCaption{
+    font-size: 2.5vw;
+  }
+
 }
 
 @media only screen and (max-width: 576px){
@@ -204,6 +305,37 @@ body{
   .container{
     padding: 0 2%;
    
+  }
+
+  #logo{
+    width: 19%;
+    height:19%;
+  }
+
+  .OrangeCaption{
+    color: #f15848 ;
+    font-size: 2.5vw;
+    
+  }
+
+  .OrangeCaptionSmall{
+    color: #f15848 ;
+    font-size: 1.5vw;
+    font-weight: 500;
+    white-space:nowrap;
+  }
+
+  .regCaption{
+    font-size: 2vw;
+    white-space:initial;
+  }
+
+  #activityLevel{
+    font-size: 2vw;
+  }
+
+  .treatCaption{
+    font-size: 2.5vw;
   }
 
 }

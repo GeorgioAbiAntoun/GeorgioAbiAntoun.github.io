@@ -2,6 +2,9 @@ var firstPage = document.getElementsByClassName("page1");
 var secondPage = document.getElementsByClassName("page2");
 var thirdPage = document.getElementsByClassName("page3");
 
+//Declaring the elements where we need to change the name
+var changeName = document.getElementsByClassName("changeName");
+
 //Declaring the elements where the user needs to input value
 var petName = document.getElementById("petName");
 var breedSelector = document.getElementById("breedSelector");
@@ -113,10 +116,16 @@ async function animateRemoveFirst() {
     breedSelector.reportValidity();
 
   } else {  //If the input is valid, the user will proceed to the next page
+
+    for (var i = 0; i < changeName.length; i++) {//If all inputs on first page are valid, replace "your pet" by your actual pet's name, capitalized
+      changeName[i].innerHTML = changeName[i].innerHTML.replace(/your pet/gi, (petName.value[0].toUpperCase() + petName.value.slice(1)) );
+    }
+
     animateFirstPage();
     const slow = await resolveAfterXMilliSecond(650)
     hideFirstPage();
   }
+
 }
 
 //This function will validate input, animate the page and transition to the third page
@@ -131,7 +140,7 @@ async function animateRemoveSecond() {
     year.reportValidity();
 
   }
-  else if (weightSelector.value == "WeightInLbs") { //This is to force the user to enter a valid year
+  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid year
 
     weightSelector.reportValidity();
 
@@ -157,3 +166,17 @@ $(document).ready(function () {
   });
 });
 
+//Hide placeholder when user clicks on input field
+$(function(){
+  $.each($('input'), function(index, value) {
+   $(this).data('holder', $(this).attr('placeholder'));
+ });
+
+   $('input').focusin(function(){
+       $(this).attr('placeholder','');
+   });
+
+   $('input').focusout(function(){
+       $(this).attr('placeholder', $(this).data('holder'));
+   });
+})

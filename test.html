@@ -28,7 +28,8 @@
             <div class="container pt-1">
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-md-4 desc"><span>I have a</span></div>
-                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
+                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog">
+                    </div>
                     <div class="col-3 col-md-2 toAlignCenter">
                         <label class="toPullLeft OrangeCaption">
                             <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" id="maleDog" name="petType"
@@ -38,9 +39,10 @@
                                 type="radio" id="femaleDog" name="petType" value="femaleDog"><span
                                 class="pl-2">female</span></label>
                     </div>
-                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat"></div>
+                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat">
+                    </div>
                     <div class="col-3 col-md-2 toAlignCenter">
-                        <label class="toPullLeft OrangeCaption" ><input class="toAlignCenter mgr mgr-success mgr-lg"
+                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
                                 type="radio" id="maleDog" name="petType" value="maleCat"><span
                                 class="pl-2">male</span></label>
                         <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
@@ -90,7 +92,7 @@
                             <div class="col-1">
                             </div>
                             <div class="col-1 radioRight">
-                                <input class="mgr mgr-success mgr-lg" type="radio" name="optradio">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="optradio" value="small">
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
@@ -100,7 +102,8 @@
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-2 backgroundLine">
-                                <input class="mgr mgr-success mgr-lg" type="radio" name="optradio">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="optradio" value="medium"
+                                    checked>
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
@@ -110,31 +113,10 @@
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 radioLeft">
-                                <input class="mgr mgr-success mgr-lg" type="radio" name="optradio">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="large" name="optradio">
                             </div>
                             <div class="col-1">
                             </div>
-
-<!--                             <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio" name="optradio"></label>
-                            </div>
-
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-4 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio" name="optradio"
-                                        checked></label>
-                            </div>
-                            <div class="col-2 col-md-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="optradio"></label>
-                            </div>
-                            <div class="col-1">
-                            </div>
-                            <div class="col-1">
-                            </div> -->
                         </div>
 
                         <div class="row">
@@ -229,50 +211,76 @@
                 <div class="row pt-1 pb-1 page2">
                     <div class="col-12 col-md-4 desc changeName">Your pet's weight condition</div>
                     <div class="col-12 col-md-8">
-                        <div class="row">
-                            <div class="col-11">
-                                <img src="images/weight.svg" class="img-fluid" alt="dog">
+                        <div class="row no-gutters">
+                            <div class="col-4 col-md-4">
+                                <img src="images/weight_skinny.svg" class="img-fluid" alt="dog">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <img src="images/weight_justright.svg" class="img-fluid" alt="dog">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <img src="images/weight_chubby.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
                         <div class="row ">
 
+
                             <div class="col-1">
                             </div>
-                            <div class="col-1" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="weightCondition"></label>
+                            <div class="col-1 radioRight">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="weightCondition"
+                                    value="skinny">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-2 backgroundLine">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="weightCondition"
+                                    value="justRight" selected>
+                            </div>
+                            <div class="col-1 backgroundLine">
                             </div>
 
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
-                            <div class="col-4 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="weightCondition" checked></label>
-                            </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="weightCondition"></label>
-                            </div>
-                            <div class="col-1">
+                            <div class="col-1 radioLeft">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="chubby"
+                                    name="weightCondition">
                             </div>
                             <div class="col-1">
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-4 regCaption">
+
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 skinny
                             </div>
-                            <div class="col-4 regCaption">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 just right
                             </div>
-                            <div class="col-4 regCaption">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 chubby
                             </div>
+                            <div class="col-1">
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -284,100 +292,113 @@
                 <div class="row pt-1 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">Your Pet's activity level</div>
                     <div class="col-12 col-md-8">
-                        <div class="row">
-                            <div class="col-12 pl-0 pr-0">
-                                <img src="images/activity level.svg" class="img-fluid" alt="dog">
-                            </div>
-                        </div>
-                        <div class="row">
 
-                            <div class="col-1">
+                        <div class="row no-gutters">
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_couchpotato.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_somewhatactive.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-1 backgroundLine">
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_active.svg" class="img-fluid" alt="dog">
                             </div>
-
-                            <div class="col-1 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_veryactive.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine">
-
-                            </div>
-                            <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel" checked></label>
-                            </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
-                            </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
-                            </div>
-                            <div class="col-1">
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_energyball.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-2 regCaption" id="activityLevel">
+
+
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1 radioLeft backgroundLine">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="couchPotato"
+                                    name="activityLevel">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine radioLeft">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="somewhatActive"
+                                    name="activityLevel">
+                            </div>
+
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine radioLeft">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="active" name="activityLevel"
+                                    checked>
+                            </div>
+                            <div class="col-1 backgroundLine">
+
+                            </div>
+                            <div class="col-1 backgroundLine radioLeft">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="veryActive"
+                                    name="activityLevel">
+                            </div>
+
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 radioLeft">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="energyBall"
+                                    name="activityLevel">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-2 col-md-2 regCaption">
                                 couch potato
                             </div>
-                            <div class="col-3 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption">
                                 somewhat active
                             </div>
-                            <div class="col-2 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption">
                                 active
                             </div>
-                            <div class="col-3 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption">
                                 very active
                             </div>
-                            <div class="col-2 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption">
                                 energy ball
                             </div>
+
                         </div>
+
                         <div class="row">
-                            <div class="col-2 OrangeCaptionSmall">
-                                under 30min
+                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+                                <div>under 30min</div>
+                                <div>of walks per day</div>
+
                             </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                0.5 to 1hr
+                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+
+                                <div>0.5 to 1hr</div>
+                                <div>of walks per day</div>
                             </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                1 to 2hr
+                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+
+                                <div>1 to 2hr</div>
+                                <div>of walks per day</div>
+
+
                             </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                2 to 3hr
+                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+                                <div>2 to 3hr</div>
+                                <div>of walks per day</div>
+
                             </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                over 3hr
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-2 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                walks/day
+                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+
+                                <div>over 3hr</div>
+                                <div>of walks per day</div>
+
                             </div>
                         </div>
                     </div>
@@ -385,44 +406,59 @@
                 <div class="row pt-3 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">How much treats does your pet get?</div>
                     <div class="col-12 col-md-8">
-                        <div class="row">
-                            <div class="col-4 col-md-3">
-                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel">
-                                    No treats
-                                </label>
+                        <div class="row no-gutters">
+                            <div class="col-1">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="noTreats" name="treatLevel">
                             </div>
-                            <div class="col-4 col-md-3">
-                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel"
-                                        checked>
-                                    Some treats
-                                </label>
+                            <div class="col-3 col-md-2 treatCaption">
+                                No treats
                             </div>
-                            <div class="col-4">
-                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel">
-                                    Lots of treats
-                                </label>
+                            <div class="col-1">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="someTreats" name="treatLevel">
+                            </div>
+                            <div class="col-3 col-md-2 treatCaption">
+                                Some treats
+                            </div>
+                            <div class="col-1">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="lotsOfTreats"
+                                    name="treatLevel">
+                            </div>
+                            <div class="col-3 col-md-2 treatCaption">
+                                Lots of treats
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">Is your pet neutered?</div>
-                    <div class="col-6 col-md-2">
-                        <label class="radio toPullLeft pt-2" id="yes" style="white-space:nowrap"><input
-                                class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag" checked>
-                            <span class="pl-2">Yes</span>
-                        </label>
+
+                    <div class="col-12 col-md-8">
+
+                        <div class="row no-gutters">
+
+                            <div class="col-2 d-none d-sm-block d-md-none">
+                            </div>
+
+                            <div class="col-1">
+                                <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" value="neutered" name="neuteredFlag" checked>
+                            </div>
+
+                            <div class="col-3 col-md-2 treatCaption">
+                                Yes
+                            </div>
+
+                            <div class="col-1">
+                                <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" value="notNeutered" name="neuteredFlag">
+                            </div>
+
+                            <div class="col-3 col-md-2 treatCaption">
+                                No
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6 col-md-2">
-                        <label class="radio toPullLeft pt-2" id="no" style="white-space:nowrap"><input
-                                class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag">
-                            <span class="pl-2">No</span>
-                        </label>
-                    </div>
+
                 </div>
+
                 <div class="row pt-1 pb-1 page3">
                     <div class="col-12 p-3">
                         <button onclick="document.location='index2.html'" type="button" class="nextButton">Next</button>

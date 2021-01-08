@@ -108,8 +108,9 @@ body{
 }
 
 .regCaption{
-  font-size: 0.9vw;
+  font-size: 0.8vw;
   white-space:nowrap;
+  align-self: center;
 }
 
 .page1{
@@ -117,7 +118,7 @@ body{
   transition: opacity .6s;
 }
 
-.page1.hide{
+/* .page1.hide{
   opacity: 0;
 }
 .page2{
@@ -132,7 +133,7 @@ body{
 
 .page3{
   display: none;
-}
+} */
 
 #breedSize{
   display: none;
@@ -152,6 +153,13 @@ body{
   font-weight: 400;
   line-height: 100%;
 
+}
+
+.treatCaption{
+  text-align: left;
+  align-self: center;
+  white-space:nowrap;
+  font-size: 0.9vw;
 }
 
 #activityLevel{
@@ -203,6 +211,10 @@ body{
 
   #activityLevel{
     font-size: 1vw;
+  }
+
+  .treatCaption{
+    font-size: 1.4vw;
   }
 
 }
@@ -262,7 +274,7 @@ body{
 
   .regCaption{
     font-size: 2vw;
-    white-space:nowrap;
+    white-space:initial;
   }
 
   #no{
@@ -280,6 +292,10 @@ body{
 
   #activityLevel{
     font-size: 1.5vw;
+  }
+
+  .treatCaption{
+    font-size: 2.5vw;
   }
 
 }
@@ -311,11 +327,15 @@ body{
 
   .regCaption{
     font-size: 2vw;
-    white-space:nowrap;
+    white-space:initial;
   }
 
   #activityLevel{
     font-size: 2vw;
+  }
+
+  .treatCaption{
+    font-size: 2.5vw;
   }
 
 }

@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
@@ -19,14 +22,14 @@
 
     <div class="container">
 
-        <header>Tell us more about your pet</header>
+        <header>Tell us more about your pet!</header>
 
         <form>
             <div class="container pt-1">
                 <div class="row pt-1 pb-1 page1">
-                    <div class="col-4 desc">I have a</div>
-                    <div class="col-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
-                    <div class="col-2 toAlignCenter">
+                    <div class="col-md-4 desc"><span>I have a</span></div>
+                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
+                    <div class="col-3 col-md-2 toAlignCenter">
                         <label class="toPullLeft OrangeCaption">
                             <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" id="maleDog" name="petType"
                                 value="maleDog" checked><span class="pl-2">male</span>
@@ -35,8 +38,8 @@
                                 type="radio" id="femaleDog" name="petType" value="femaleDog"><span
                                 class="pl-2">female</span></label>
                     </div>
-                    <div class="col-2 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat"></div>
-                    <div class="col-2 toAlignCenter">
+                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat"></div>
+                    <div class="col-3 col-md-2 toAlignCenter">
                         <label class="toPullLeft OrangeCaption" ><input class="toAlignCenter mgr mgr-success mgr-lg"
                                 type="radio" id="maleDog" name="petType" value="maleCat"><span
                                 class="pl-2">male</span></label>
@@ -47,17 +50,17 @@
                 </div>
 
                 <div class="row pt-1 pb-1 page1">
-                    <div class="col-4 desc">Your pet's name</div>
-                    <div class="col-7 p-2">
-                        <input class="form-control" id="petName" type="text" placeholder=" Pet's Name">
+                    <div class="col-12 col-md-4 desc">Your pet's name</div>
+                    <div class="col-12 col-md-7 p-2">
+                        <input class="form-control" id="petName" type="text" placeholder=" Pet's Name" maxlength="12">
                     </div>
                 </div>
 
                 <div class="row pt-1 pb-1 page1">
-                    <div class="col-4 desc">Breed</div>
-                    <div class="col-7 p-2">
+                    <div class="col-12 col-md-4 desc">Breed</div>
+                    <div class="col-12 col-md-7 p-2">
                         <select class="form-control" id="breedSelector">
-                            <option value="SelectBreed">Select Breed</option>
+                            <option selected disabled value="SelectBreed">Select Breed</option>
                             <option value="MixedBreed">Mixed Breed</option>
                             <option value="GoldenRetriever">Golden Retriever</option>
                             <option value="Husky">Husky</option>
@@ -68,10 +71,10 @@
                     </div>
                 </div>
                 <div class="row  pt-1 pb-1 page1" id="breedSize">
-                    <div class="col-4 desc">Breed size</div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-4 desc">Breed size</div>
+                    <div class="col-12 col-md-8">
                         <div class="row">
-                            <div class="col-11">
+                            <div class="col-12 col-md-11">
                                 <img src="images/breed_size_cropped_nose.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
@@ -86,13 +89,14 @@
                                 <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
                                         name="optradio"></label>
                             </div>
+
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-4 backgroundLine">
                                 <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio" name="optradio"
                                         checked></label>
                             </div>
-                            <div class="col-1 backgroundLine">
+                            <div class="col-2 col-md-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine" id="rightButton">
                                 <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
@@ -126,8 +130,21 @@
                     </div>
                 </div>
                 <div class="row pt-5 pb-1 page2">
-                    <div class="col-4 desc">Your pet's birthday</div>
-                    <div class="col-2">
+                    <div class="col-12 col-md-4 desc changeName">Your pet's birthday</div>
+                    <div class="col-4 col-md-2">
+                        <div class="row">
+                            <div class="col-12 pl-2">
+                                <input class="form-control" id="day" style="text-align:center" type="number"
+                                    placeholder="1" min="1" max="31" maxlength="2">
+                            </div>
+                        </div>
+                        <div class="row pt-1">
+                            <div class="col-12 OrangeCaption">
+                                Day
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-2">
                         <div class="row">
                             <div class="col-12 pl-2">
                                 <input class="form-control" id="month" style="text-align:center" type="number"
@@ -135,12 +152,12 @@
                             </div>
                         </div>
                         <div class="row pt-1">
-                            <div class="col-12 OrangeCaptionSmall">
+                            <div class="col-12 OrangeCaption">
                                 Month
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
+                    <div class="col-4 col-md-2">
                         <div class="row">
                             <div class="col-12 pl-0">
                                 <input class="form-control" id="year" style="text-align:center" type="number"
@@ -148,17 +165,17 @@
                             </div>
                         </div>
                         <div class="row pt-1">
-                            <div class="col-12 OrangeCaptionSmall">
+                            <div class="col-12 OrangeCaption">
                                 Year
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page2">
-                    <div class="col-4 desc">What is your pet's weight?</div>
-                    <div class="col-6 p-2">
+                    <div class="col-12 col-md-4 desc changeName">What is your pet's weight?</div>
+                    <div class="col-12 col-md-6 p-2">
                         <select class="form-control" id="weightSelector">
-                            <option value="WeightInLbs">Weight in lbs</option>
+                            <option value="WeightInKgs">Weight in Kgs</option>
                             <option value="0-2">0-2</option>
                             <option value="2-4">2-4</option>
                             <option value="4-10">4-10</option>
@@ -170,8 +187,8 @@
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page2">
-                    <div class="col-4 desc">Your pet's weight condition</div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-4 desc changeName">Your pet's weight condition</div>
+                    <div class="col-12 col-md-8">
                         <div class="row">
                             <div class="col-11">
                                 <img src="images/weight.svg" class="img-fluid" alt="dog">
@@ -225,8 +242,8 @@
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page3">
-                    <div class="col-4 desc">Your Pet's activity level</div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-4 desc changeName">Your Pet's activity level</div>
+                    <div class="col-12 col-md-8">
                         <div class="row">
                             <div class="col-12 pl-0 pr-0">
                                 <img src="images/activity level.svg" class="img-fluid" alt="dog">
@@ -273,19 +290,19 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-2 regCaption">
+                            <div class="col-2 regCaption" id="activityLevel">
                                 couch potato
                             </div>
-                            <div class="col-3 regCaption">
+                            <div class="col-3 regCaption" id="activityLevel">
                                 somewhat active
                             </div>
-                            <div class="col-2 regCaption">
+                            <div class="col-2 regCaption" id="activityLevel">
                                 active
                             </div>
-                            <div class="col-3 regCaption">
+                            <div class="col-3 regCaption" id="activityLevel">
                                 very active
                             </div>
-                            <div class="col-2 regCaption">
+                            <div class="col-2 regCaption" id="activityLevel">
                                 energy ball
                             </div>
                         </div>
@@ -326,16 +343,16 @@
                     </div>
                 </div>
                 <div class="row pt-3 pb-1 page3">
-                    <div class="col-4 desc">How much treats does your pet get?</div>
-                    <div class="col-8">
+                    <div class="col-12 col-md-4 desc changeName">How much treats does your pet get?</div>
+                    <div class="col-12 col-md-8">
                         <div class="row">
-                            <div class="col-3">
+                            <div class="col-4 col-md-3">
                                 <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
                                         class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel">
                                     No treats
                                 </label>
                             </div>
-                            <div class="col-3">
+                            <div class="col-4 col-md-3">
                                 <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
                                         class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel"
                                         checked>
@@ -352,15 +369,15 @@
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page3">
-                    <div class="col-4 desc">Is your pet neutered?</div>
-                    <div class="col-2">
-                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
+                    <div class="col-12 col-md-4 desc changeName">Is your pet neutered?</div>
+                    <div class="col-6 col-md-2">
+                        <label class="radio toPullLeft pt-2" id="yes" style="white-space:nowrap"><input
                                 class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag" checked>
                             <span class="pl-2">Yes</span>
                         </label>
                     </div>
-                    <div class="col-2">
-                        <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
+                    <div class="col-6 col-md-2">
+                        <label class="radio toPullLeft pt-2" id="no" style="white-space:nowrap"><input
                                 class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag">
                             <span class="pl-2">No</span>
                         </label>
