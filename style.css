@@ -42,6 +42,13 @@ body{
   font-size: 1vw;
   
 }
+
+.maleFemale{
+  color: #f15848 ;
+  font-size: 1vw;
+  
+}
+
 .OrangeCaptionSmall{
   color: #f15848 ;
   font-size: 0.75vw;
@@ -164,7 +171,7 @@ body{
 }
 
 #activityLevel{
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 
 .imageSelectorBreedSize{
@@ -278,6 +285,12 @@ body{
     
   }
 
+  .maleFemale{
+    color: #f15848 ;
+    font-size: 3vw;
+    
+  }
+
   .OrangeCaptionSmall{
     color: #f15848 ;
     font-size: 1.2vw;
@@ -332,6 +345,12 @@ body{
   .OrangeCaption{
     color: #f15848 ;
     font-size: 2.5vw;
+    
+  }
+
+  .maleFemale{
+    color: #f15848 ;
+    font-size: 3.5vw;
     
   }
 

@@ -145,7 +145,7 @@ async function animateRemoveSecond() {
 
     year.reportValidity();
 
-  }  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid year
+  }  else if (weightSelector.value == "" || weightSelector.value < 0 || weightSelector.value > 110) { //This is to force the user to enter a valid weight
 
     weightSelector.reportValidity();
 
