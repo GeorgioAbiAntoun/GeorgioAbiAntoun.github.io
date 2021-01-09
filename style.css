@@ -121,7 +121,7 @@ body{
   align-self: center;
 }
 
-/* .page1{
+.page1{
   opacity: 1;
   transition: opacity .6s;
 }
@@ -142,7 +142,6 @@ body{
 .page3{
   display: none;
 }
- */
 #breedSize{
   display: none;
 }
