@@ -28,6 +28,7 @@ body{
   font-weight: 700;
   margin: 0 0 20px 0;
 }
+
 .toAlignCenter{
   align-self: center;
 }
@@ -113,7 +114,7 @@ body{
   align-self: center;
 }
 
-.page1{
+/* .page1{
   opacity: 1;
   transition: opacity .6s;
 }
@@ -134,7 +135,7 @@ body{
 .page3{
   display: none;
 }
-
+ */
 #breedSize{
   display: none;
 }
@@ -164,6 +165,14 @@ body{
 
 #activityLevel{
   font-size: 1vw;
+}
+
+.imageSelectorBreedSize{
+  margin-left: -50px;
+}
+
+.imageSelectorWeightCondition{
+  padding-left: 0px;
 }
 
 /*Change the glow color from blue to orange*/ 
@@ -202,7 +211,7 @@ body{
   vertical-align: middle;
 }
 
-@media only screen and (max-width: 960px){
+@media only screen and (max-width: 992px){
 
   #logo{
     width: 15%;
@@ -215,6 +224,10 @@ body{
 
   .treatCaption{
     font-size: 1.4vw;
+  }
+
+  .imageSelectorBreedSize{
+    margin-left: -35px;
   }
 
 }
@@ -296,6 +309,10 @@ body{
 
   .treatCaption{
     font-size: 2.5vw;
+  }
+
+  .imageSelectorBreedSize{
+    margin-left: 0px;
   }
 
 }
