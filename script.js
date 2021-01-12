@@ -13,6 +13,30 @@ var month = document.getElementById("month");
 var year = document.getElementById("year");
 var weightSelector = document.getElementById("weightSelector");
 
+//Declaring the sections to show/hide
+var couchPotato = document.getElementsByClassName("couchPotato");
+var somewhatActive = document.getElementsByClassName("somewhatActive");
+var active = document.getElementsByClassName("active");
+var veryActive = document.getElementsByClassName("veryActive");
+var energyBall = document.getElementsByClassName("energyBall");
+
+var sections = [couchPotato, somewhatActive, active, veryActive, energyBall];
+
+//Declaring the activity level radio buttons
+var couchPotatoButton = document.getElementById("couchPotatoButton");
+var somewhatActiveButton = document.getElementById("somewhatActiveButton");
+var activeButton = document.getElementById("activeButton");
+var veryActiveButton = document.getElementById("veryActiveButton");
+var energyBallButton = document.getElementById("energyBallButton");
+
+
+//Adding the corresponding event listeners
+couchPotatoButton.addEventListener('click',()=>showSection(couchPotato));
+somewhatActiveButton.addEventListener('click',()=>showSection(somewhatActive));
+activeButton.addEventListener('click',()=>showSection(active));
+veryActiveButton.addEventListener('click',()=>showSection(veryActive));
+energyBallButton.addEventListener('click',()=>showSection(energyBall));
+
 //Declaring the error message for each input element
 petName.setCustomValidity("Please enter your pet's name");
 breedSelector.setCustomValidity('Please select a breed!');
@@ -175,6 +199,27 @@ async function animateRemoveSecond() {
     hideSecondPage();
   }
 
+
+}
+
+function showSection(element){
+
+  for(var i = 0; i < sections.length; i++){
+
+    for(var j = 0; j < element.length; j++){
+      if(sections[i] == element){
+      
+        sections[i][j].classList.remove("hide");
+        sections[i][j].classList.add("show");
+      }
+      else{
+        sections[i][j].classList.remove("show");
+        sections[i][j].classList.add("hide");
+  
+      }
+
+    }
+  }
 
 }
 

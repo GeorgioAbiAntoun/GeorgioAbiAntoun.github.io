@@ -144,6 +144,70 @@ body{
 .page3{
   display: none;
 }
+
+.couchPotato{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.couchPotato.hide{
+  opacity: 0;
+}
+
+.couchPotato.show{
+  opacity: 1;
+}
+
+.somewhatActive{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.somewhatActive.hide{
+  opacity: 0;
+}
+
+.somewhatActive.show{
+  opacity: 1;
+}
+
+.active{
+  opacity: 1;
+  transition: opacity .6s;
+}
+.active.hide{
+  opacity: 0;
+}
+.active.show{
+  opacity: 1;
+}
+
+.veryActive{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.veryActive.hide{
+  opacity: 0;
+}
+.veryActive.show{
+  opacity: 1;
+}
+
+
+.energyBall{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.energyBall.hide{
+  opacity: 0;
+}
+
+.energyBall.show{
+  opacity: 1;
+}
+
 #breedSize{
   display: none;
 }

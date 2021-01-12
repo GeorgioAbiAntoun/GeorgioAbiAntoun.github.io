@@ -30,7 +30,7 @@
                     <div class="col-md-4 desc"><span>I have a</span></div>
                     <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog">
                     </div>
-                    <div class="col-3 col-md-2 toAlignCenter">
+                    <div class="col-2 col-md-1 toAlignCenter">
                         <label class="toPullLeft maleFemale">
                             <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" id="maleDog" name="petType"
                                 value="maleDog" checked><span class="pl-2">male</span>
@@ -53,14 +53,14 @@
 
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-12 col-md-4 desc">Your pet's name</div>
-                    <div class="col-12 col-md-7 p-2">
+                    <div class="col-12 col-md-6 p-2">
                         <input class="form-control" id="petName" type="text" placeholder=" Pet's Name" maxlength="12">
                     </div>
                 </div>
 
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-12 col-md-4 desc">Breed</div>
-                    <div class="col-12 col-md-7 p-2">
+                    <div class="col-12 col-md-6 p-2">
                         <select class="form-control" id="breedSelector">
                             <option selected disabled value="SelectBreed">Select Breed</option>
                             <option value="MixedBreed">Mixed Breed</option>
@@ -301,7 +301,7 @@
                 </div>
                 <div class="row pt-1 pb-1 page2">
                     <div class="col-12 col-md-4 desc changeName">Your pet's weight condition</div>
-                    <div class="col-12 col-md-8 imageSelectorWeightCondition">
+                    <div class="col-12 col-md-6 imageSelectorWeightCondition pr-0">
                         <div class="row no-gutters">
                             <div class="col-4 col-md-4">
                                 <img src="images/weight_skinny.svg" class="img-fluid" alt="dog">
@@ -382,7 +382,7 @@
                 </div>
                 <div class="row pt-1 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">Your Pet's activity level</div>
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-7">
 
 
 
@@ -391,19 +391,19 @@
                             <div class="col-1 d-md-none"></div>
 
                             <div class="col-2 col-md-2">
-                                <img src="images/activity_couchpotato.svg" class="img-fluid" alt="dog">
+                                <img src="images/activity_couchpotato.svg" class="img-fluid couchPotato" alt="dog">
                             </div>
                             <div class="col-2 col-md-2">
-                                <img src="images/activity_somewhatactive.svg" class="img-fluid" alt="dog">
+                                <img src="images/activity_somewhatactive.svg" class="img-fluid somewhatActive" alt="dog">
                             </div>
                             <div class="col-2 col-md-2">
-                                <img src="images/activity_active.svg" class="img-fluid" alt="dog">
+                                <img src="images/activity_active.svg" class="img-fluid active" alt="dog">
                             </div>
                             <div class="col-2 col-md-2">
-                                <img src="images/activity_veryactive.svg" class="img-fluid" alt="dog">
+                                <img src="images/activity_veryactive.svg" class="img-fluid veryActive" alt="dog">
                             </div>
                             <div class="col-2 col-md-2">
-                                <img src="images/activity_energyball.svg" class="img-fluid" alt="dog">
+                                <img src="images/activity_energyball.svg" class="img-fluid energyBall" alt="dog">
                             </div>
                         </div>
 
@@ -414,34 +414,34 @@
                             <div class="col-1">
                             </div>
                             <div class="col-1 radioLeft backgroundLine">
-                                <input class="mgr mgr-success mgr-lg" type="radio" value="couchPotato"
+                                <input class="mgr mgr-success mgr-lg" id="couchPotatoButton" type="radio" value="couchPotato"
                                     name="activityLevel">
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine radioLeft">
-                                <input class="mgr mgr-success mgr-lg" type="radio" value="somewhatActive"
+                                <input class="mgr mgr-success mgr-lg" id="somewhatActiveButton" type="radio" value="somewhatActive"
                                     name="activityLevel">
                             </div>
 
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine radioLeft">
-                                <input class="mgr mgr-success mgr-lg" type="radio" value="active" name="activityLevel"
+                                <input class="mgr mgr-success mgr-lg" id="activeButton" type="radio" value="active" name="activityLevel"
                                     checked>
                             </div>
                             <div class="col-1 backgroundLine">
 
                             </div>
                             <div class="col-1 backgroundLine radioLeft">
-                                <input class="mgr mgr-success mgr-lg" type="radio" value="veryActive"
+                                <input class="mgr mgr-success mgr-lg" id="veryActiveButton" type="radio" value="veryActive"
                                     name="activityLevel">
                             </div>
 
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 radioLeft">
-                                <input class="mgr mgr-success mgr-lg" type="radio" value="energyBall"
+                                <input class="mgr mgr-success mgr-lg" id="energyBallButton" type="radio" value="energyBall"
                                     name="activityLevel">
                             </div>
                             <div class="col-1">
@@ -452,19 +452,19 @@
 
                             <div class="col-1 d-md-none"></div>
 
-                            <div class="col-2 col-md-2 regCaption">
+                            <div class="col-2 col-md-2 regCaption couchPotato">
                                 couch potato
                             </div>
-                            <div class="col-2 col-md-2 regCaption">
+                            <div class="col-2 col-md-2 regCaption somewhatActive">
                                 somewhat active
                             </div>
-                            <div class="col-2 col-md-2 regCaption">
+                            <div class="col-2 col-md-2 regCaption active">
                                 active
                             </div>
-                            <div class="col-2 col-md-2 regCaption">
+                            <div class="col-2 col-md-2 regCaption veryActive">
                                 very active
                             </div>
-                            <div class="col-2 col-md-2 regCaption">
+                            <div class="col-2 col-md-2 regCaption energyBall">
                                 energy ball
                             </div>
 
@@ -474,29 +474,29 @@
 
                             <div class="col-1 d-md-none"></div>
 
-                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+                            <div class="col-2 col-md-2 OrangeCaptionSmall couchPotato">
                                 <div>under 30min</div>
                                 <div>of activity</div>
 
                             </div>
-                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+                            <div class="col-2 col-md-2 OrangeCaptionSmall somewhatActive">
 
                                 <div>0.5 to 1hr</div>
                                 <div>of activity</div>
                             </div>
-                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+                            <div class="col-2 col-md-2 OrangeCaptionSmall active">
 
                                 <div>1 to 2hr</div>
                                 <div>of activity</div>
 
 
                             </div>
-                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+                            <div class="col-2 col-md-2 OrangeCaptionSmall veryActive">
                                 <div>2 to 3hr</div>
                                 <div>of activity</div>
 
                             </div>
-                            <div class="col-2 col-md-2 OrangeCaptionSmall">
+                            <div class="col-2 col-md-2 OrangeCaptionSmall energyBall">
 
                                 <div>over 3hr</div>
                                 <div>of activity</div>
