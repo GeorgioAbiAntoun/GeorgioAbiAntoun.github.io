@@ -133,7 +133,7 @@ async function animateRemoveFirst() {
 //This function will validate input, animate the page and transition to the third page
 async function animateRemoveSecond() {
 
-  if (day.value < 1 || day.value > 31) {  //Check if the user is entering a valid month, range check will be done from the JS
+/*   if (day.value < 1 || day.value > 31) {  //Check if the user is entering a valid month, range check will be done from the JS
 
     day.reportValidity();
   }
@@ -145,7 +145,26 @@ async function animateRemoveSecond() {
 
     year.reportValidity();
 
-  }  else if (weightSelector.value == "" || weightSelector.value < 0 || weightSelector.value > 110) { //This is to force the user to enter a valid weight
+  }  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid weight
+
+    weightSelector.reportValidity();
+
+  }
+  else {  //If all input is valid, proceed to the last page
+    animateSecondPage();
+    const slow = await resolveAfterXMilliSecond(650)
+    hideSecondPage();
+  } */
+
+ if (month.value == "selectMonth") { //Check if the user is entering a valid month, range check will be done from the HTML
+
+    month.reportValidity();
+
+  }else if (year.value == "selectYear") { //Check if the user is entering a valid year, range check will be done from the HTML
+
+    year.reportValidity();
+
+  }  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid weight
 
     weightSelector.reportValidity();
 

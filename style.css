@@ -183,6 +183,10 @@ body{
   padding-left: 0px;
 }
 
+/* select{
+  text-align-last:center;
+}
+ */
 /*Change the glow color from blue to orange*/ 
 .form-control:focus {
   border-color: #f15848;
