@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url("font/stylesheet.css");
+
 *{
   margin: 0;
   padding: 0;
   outline: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'GT Walsheim Pro', sans-serif;
 }
 body{
   background: #f1f1f1 ;
@@ -28,6 +30,7 @@ body{
   font-weight: 700;
   margin: 0 0 20px 0;
 }
+
 .toAlignCenter{
   align-self: center;
 }
@@ -41,6 +44,13 @@ body{
   font-size: 1vw;
   
 }
+
+.maleFemale{
+  color: #f15848 ;
+  font-size: 1vw;
+  
+}
+
 .OrangeCaptionSmall{
   color: #f15848 ;
   font-size: 0.75vw;
@@ -98,11 +108,21 @@ body{
   padding-right: 0%;
 }
 
-.regCaption{
-  font-size: 0.9vw;
-  white-space:nowrap;
+.radioLeft{
+  text-align: left;
+  padding: 0;
+}
+.radioRight{
+  text-align: right;
+  padding: 0;
 }
 
+.regCaption{
+  font-size: 0.8vw;
+  white-space:nowrap;
+  align-self: center;
+}
+/* 
 .page1{
   opacity: 1;
   transition: opacity .6s;
@@ -123,6 +143,69 @@ body{
 
 .page3{
   display: none;
+} */
+
+.couchPotato{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.couchPotato.hide{
+  opacity: 0;
+}
+
+.couchPotato.show{
+  opacity: 1;
+}
+
+.somewhatActive{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.somewhatActive.hide{
+  opacity: 0;
+}
+
+.somewhatActive.show{
+  opacity: 1;
+}
+
+.active{
+  opacity: 1;
+  transition: opacity .6s;
+}
+.active.hide{
+  opacity: 0;
+}
+.active.show{
+  opacity: 1;
+}
+
+.veryActive{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.veryActive.hide{
+  opacity: 0;
+}
+.veryActive.show{
+  opacity: 1;
+}
+
+
+.energyBall{
+  opacity: 0;
+  transition: opacity .6s;
+}
+
+.energyBall.hide{
+  opacity: 0;
+}
+
+.energyBall.show{
+  opacity: 1;
 }
 
 #breedSize{
@@ -132,8 +215,8 @@ body{
 #logo{
   width: 12%;
   height: 12%;
-  max-width: 220px;
-  max-height: 150px;
+  max-width: 130px;
+  max-height: 920px;
 }
 
 .form-control {
@@ -145,10 +228,29 @@ body{
 
 }
 
-#activityLevel{
-  font-size: 1vw;
+.treatCaption{
+  text-align: left;
+  align-self: center;
+  white-space:nowrap;
+  font-size: 0.9vw;
 }
 
+#activityLevel{
+  font-size: 1.5vw;
+}
+
+.imageSelectorBreedSize{
+  margin-left: -15px;
+}
+
+.imageSelectorWeightCondition{
+  padding-left: 0px;
+}
+
+/* select{
+  text-align-last:center;
+}
+ */
 /*Change the glow color from blue to orange*/ 
 .form-control:focus {
   border-color: #f15848;
@@ -180,7 +282,12 @@ body{
 }
  */
 
-@media only screen and (max-width: 960px){
+ input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+@media only screen and (max-width: 992px){
 
   #logo{
     width: 15%;
@@ -189,6 +296,14 @@ body{
 
   #activityLevel{
     font-size: 1vw;
+  }
+
+  .treatCaption{
+    font-size: 1.4vw;
+  }
+
+  .imageSelectorBreedSize{
+    margin-left: -35px;
   }
 
 }
@@ -239,6 +354,12 @@ body{
     
   }
 
+  .maleFemale{
+    color: #f15848 ;
+    font-size: 3vw;
+    
+  }
+
   .OrangeCaptionSmall{
     color: #f15848 ;
     font-size: 1.2vw;
@@ -248,7 +369,7 @@ body{
 
   .regCaption{
     font-size: 2vw;
-    white-space:nowrap;
+    white-space:initial;
   }
 
   #no{
@@ -266,6 +387,14 @@ body{
 
   #activityLevel{
     font-size: 1.5vw;
+  }
+
+  .treatCaption{
+    font-size: 2.5vw;
+  }
+
+  .imageSelectorBreedSize{
+    margin-left: 0px;
   }
 
 }
@@ -288,6 +417,12 @@ body{
     
   }
 
+  .maleFemale{
+    color: #f15848 ;
+    font-size: 3.5vw;
+    
+  }
+
   .OrangeCaptionSmall{
     color: #f15848 ;
     font-size: 1.5vw;
@@ -297,11 +432,15 @@ body{
 
   .regCaption{
     font-size: 2vw;
-    white-space:nowrap;
+    white-space:initial;
   }
 
   #activityLevel{
     font-size: 2vw;
+  }
+
+  .treatCaption{
+    font-size: 2.5vw;
   }
 
 }

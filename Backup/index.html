@@ -11,7 +11,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="magic-input.css">
+    <!-- <link rel="stylesheet" href="magic-input.css"> -->
 
     <title>Getting Started Flow</title>
 </head>
@@ -22,28 +22,30 @@
 
     <div class="container">
 
-        <header>Tell us more about your pet!</header>
+        <header class="changeName">Tell us more about your pet!</header>
 
         <form>
             <div class="container pt-1">
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-md-4 desc"><span>I have a</span></div>
-                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog"></div>
-                    <div class="col-3 col-md-2 toAlignCenter">
-                        <label class="toPullLeft OrangeCaption">
+                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog">
+                    </div>
+                    <div class="col-3 col-md-1 toAlignCenter">
+                        <label class="toPullLeft maleFemale">
                             <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" id="maleDog" name="petType"
                                 value="maleDog" checked><span class="pl-2">male</span>
                         </label>
-                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
+                        <label class="toPullLeft maleFemale"><input class="toAlignCenter mgr mgr-success mgr-lg"
                                 type="radio" id="femaleDog" name="petType" value="femaleDog"><span
                                 class="pl-2">female</span></label>
                     </div>
-                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat"></div>
+                    <div class="col-3 col-md-2 toAlignCenter"><img src="images/cat.svg" class="img-fluid" alt="cat">
+                    </div>
                     <div class="col-3 col-md-2 toAlignCenter">
-                        <label class="toPullLeft OrangeCaption" ><input class="toAlignCenter mgr mgr-success mgr-lg"
+                        <label class="toPullLeft maleFemale"><input class="toAlignCenter mgr mgr-success mgr-lg"
                                 type="radio" id="maleDog" name="petType" value="maleCat"><span
                                 class="pl-2">male</span></label>
-                        <label class="toPullLeft OrangeCaption"><input class="toAlignCenter mgr mgr-success mgr-lg"
+                        <label class="toPullLeft maleFemale"><input class="toAlignCenter mgr mgr-success mgr-lg"
                                 type="radio" id="femaleDog" name="petType" value="femaleCat"><span
                                 class="pl-2">female</span></label>
                     </div>
@@ -51,14 +53,14 @@
 
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-12 col-md-4 desc">Your pet's name</div>
-                    <div class="col-12 col-md-7 p-2">
+                    <div class="col-12 col-md-6 p-2">
                         <input class="form-control" id="petName" type="text" placeholder=" Pet's Name" maxlength="12">
                     </div>
                 </div>
 
                 <div class="row pt-1 pb-1 page1">
                     <div class="col-12 col-md-4 desc">Breed</div>
-                    <div class="col-12 col-md-7 p-2">
+                    <div class="col-12 col-md-6 p-2">
                         <select class="form-control" id="breedSelector">
                             <option selected disabled value="SelectBreed">Select Breed</option>
                             <option value="MixedBreed">Mixed Breed</option>
@@ -72,55 +74,75 @@
                 </div>
                 <div class="row  pt-1 pb-1 page1" id="breedSize">
                     <div class="col-12 col-md-4 desc">Breed size</div>
-                    <div class="col-12 col-md-8">
+                    <div class="col-12 col-md-6 imageSelectorBreedSize">
                         <div class="row">
-                            <div class="col-12 col-md-11">
-                                <img src="images/breed_size_cropped_nose.svg" class="img-fluid" alt="dog">
+                            <div class="col-4 col-md-4">
+                                <img src="images/breed_small.svg" class="img-fluid" alt="dog">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <img src="images/breed_medium.svg" class="img-fluid" alt="dog">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <img src="images/breed_large.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
                         <div class="row ">
 
 
                             <div class="col-1">
-
                             </div>
-
-                            <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="optradio"></label>
+                            <div class="col-1 radioRight">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="optradio" value="small">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine">
                             </div>
 
                             <div class="col-1 backgroundLine">
                             </div>
-                            <div class="col-4 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio" name="optradio"
-                                        checked></label>
+                            <div class="col-2 backgroundLine">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="optradio" value="medium"
+                                    checked>
                             </div>
-                            <div class="col-2 col-md-1 backgroundLine">
+                            <div class="col-1 backgroundLine">
                             </div>
-                            <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="optradio"></label>
+
+                            <div class="col-1 backgroundLine">
                             </div>
-                            <div class="col-1">
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 radioLeft">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="large" name="optradio">
                             </div>
                             <div class="col-1">
                             </div>
                         </div>
 
                         <div class="row">
+
+                            <div class="col-1">
+                            </div>
                             <div class="col-2 regCaption">
                                 small
                             </div>
-                            <div class="col-1 regCaption">
-
+                            <div class="col-1">
                             </div>
-                            <div class="col-4 regCaption">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 medium
                             </div>
-                            <div class="col-4 regCaption">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 large
                             </div>
+                            <div class="col-1">
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -134,8 +156,44 @@
                     <div class="col-4 col-md-2">
                         <div class="row">
                             <div class="col-12 pl-2">
-                                <input class="form-control" id="day" style="text-align:center" type="number"
-                                    placeholder="1" min="1" max="31" maxlength="2">
+
+                                <select class="form-control" id="day">
+                                    <option value="day">Day</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+
+                                <!-- <input class="form-control" id="day" style="text-align:center" type="number" placeholder="1" value="1" min="1" max="31" maxlength="2"> -->
+
                             </div>
                         </div>
                         <div class="row pt-1">
@@ -147,8 +205,25 @@
                     <div class="col-4 col-md-2">
                         <div class="row">
                             <div class="col-12 pl-2">
-                                <input class="form-control" id="month" style="text-align:center" type="number"
-                                    placeholder="12" min="1" max="12" maxlength="2">
+
+                                <select class="form-control" id="month">
+                                    <option value="selectMonth">Month</option>
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                </select>
+
+                                <!-- <input class="form-control" id="month" style="text-align:center" type="number" placeholder="12" min="1" max="12" maxlength="2"> -->
+
                             </div>
                         </div>
                         <div class="row pt-1">
@@ -160,8 +235,45 @@
                     <div class="col-4 col-md-2">
                         <div class="row">
                             <div class="col-12 pl-0">
-                                <input class="form-control" id="year" style="text-align:center" type="number"
-                                    placeholder="2020" min="1990" max="2021">
+
+                                <select class="form-control" id="year">
+                                    <option value="selectYear">Year</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2020">2020</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                    <option value="2015">2015</option>
+                                    <option value="2014">2014</option>
+                                    <option value="2013">2013</option>
+                                    <option value="2012">2012</option>
+                                    <option value="2011">2011</option>
+                                    <option value="2010">2010</option>
+                                    <option value="2009">2009</option>
+                                    <option value="2008">2008</option>
+                                    <option value="2007">2007</option>
+                                    <option value="2006">2006</option>
+                                    <option value="2005">2005</option>
+                                    <option value="2004">2004</option>
+                                    <option value="2003">2003</option>
+                                    <option value="2002">2002</option>
+                                    <option value="2001">2001</option>
+                                    <option value="2000">2000</option>
+                                    <option value="1999">1999</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1990">1990</option>
+                                </select>
+
+                                <!-- <input class="form-control" id="year" style="text-align:center" type="number" placeholder="2020" min="1990" max="2021"> -->
+
                             </div>
                         </div>
                         <div class="row pt-1">
@@ -174,6 +286,7 @@
                 <div class="row pt-1 pb-1 page2">
                     <div class="col-12 col-md-4 desc changeName">What is your pet's weight?</div>
                     <div class="col-12 col-md-6 p-2">
+
                         <select class="form-control" id="weightSelector">
                             <option value="WeightInKgs">Weight in Kgs</option>
                             <option value="0-2">0-2</option>
@@ -184,55 +297,82 @@
                             <option value="40-80">40-80</option>
                             <option value="80+">80+</option>
                         </select>
+
                     </div>
                 </div>
                 <div class="row pt-1 pb-1 page2">
                     <div class="col-12 col-md-4 desc changeName">Your pet's weight condition</div>
-                    <div class="col-12 col-md-8">
-                        <div class="row">
-                            <div class="col-11">
-                                <img src="images/weight.svg" class="img-fluid" alt="dog">
+                    <div class="col-12 col-md-6 imageSelectorWeightCondition pr-0">
+                        <div class="row no-gutters">
+                            <div class="col-4 col-md-4">
+                                <img src="images/weight_skinny.svg" class="img-fluid" alt="dog">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <img src="images/weight_justright.svg" class="img-fluid" alt="dog">
+                            </div>
+                            <div class="col-4 col-md-4">
+                                <img src="images/weight_chubby.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
                         <div class="row ">
 
+
                             <div class="col-1">
                             </div>
-                            <div class="col-1" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="weightCondition"></label>
+                            <div class="col-1 radioRight">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="weightCondition"
+                                    value="skinny">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-2 backgroundLine">
+                                <input class="mgr mgr-success mgr-lg" type="radio" name="weightCondition"
+                                    value="justRight" checked>
+                            </div>
+                            <div class="col-1 backgroundLine">
                             </div>
 
                             <div class="col-1 backgroundLine">
                             </div>
                             <div class="col-1 backgroundLine">
                             </div>
-                            <div class="col-4 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="weightCondition" checked></label>
-                            </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="weightCondition"></label>
-                            </div>
-                            <div class="col-1">
+                            <div class="col-1 radioLeft">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="chubby"
+                                    name="weightCondition">
                             </div>
                             <div class="col-1">
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-4 regCaption">
+
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 skinny
                             </div>
-                            <div class="col-4 regCaption">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 just right
                             </div>
-                            <div class="col-4 regCaption">
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                            <div class="col-2 regCaption">
                                 chubby
                             </div>
+                            <div class="col-1">
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -243,101 +383,125 @@
                 </div>
                 <div class="row pt-1 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">Your Pet's activity level</div>
-                    <div class="col-12 col-md-8">
-                        <div class="row">
-                            <div class="col-12 pl-0 pr-0">
-                                <img src="images/activity level.svg" class="img-fluid" alt="dog">
-                            </div>
-                        </div>
-                        <div class="row">
+                    <div class="col-12 col-md-7">
 
-                            <div class="col-1">
-                            </div>
-                            <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
-                            </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
 
-                            <div class="col-1 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
-                            </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine">
 
+                        <div class="row no-gutters">
+
+                            <div class="col-1 d-md-none"></div>
+
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_couchpotato.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-1 backgroundLine" id="leftButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel" checked></label>
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_somewhatactive.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-1 backgroundLine">
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_active.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-1 backgroundLine">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_veryactive.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-1 backgroundLine">
-                            </div>
-                            <div class="col-1 backgroundLine" id="rightButton">
-                                <label class="radio"><input class="mgr mgr-success mgr-lg" type="radio"
-                                        name="activityLevel"></label>
-                            </div>
-                            <div class="col-1">
+                            <div class="col-2 col-md-2">
+                                <img src="images/activity_energyball.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-2 regCaption" id="activityLevel">
+
+                            <div class="col-1 d-md-none"></div>
+
+                            <div class="col-1">
+                            </div>
+                            <div class="col-1 radioLeft backgroundLine">
+                                <input class="mgr mgr-success mgr-lg" id="couchPotatoButton" type="radio" value="couchPotato"
+                                    name="activityLevel">
+                            </div>
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine radioLeft">
+                                <input class="mgr mgr-success mgr-lg" id="somewhatActiveButton" type="radio" value="somewhatActive"
+                                    name="activityLevel">
+                            </div>
+
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 backgroundLine radioLeft">
+                                <input class="mgr mgr-success mgr-lg" id="activeButton" type="radio" value="active" name="activityLevel"
+                                    checked>
+                            </div>
+                            <div class="col-1 backgroundLine">
+
+                            </div>
+                            <div class="col-1 backgroundLine radioLeft">
+                                <input class="mgr mgr-success mgr-lg" id="veryActiveButton" type="radio" value="veryActive"
+                                    name="activityLevel">
+                            </div>
+
+                            <div class="col-1 backgroundLine">
+                            </div>
+                            <div class="col-1 radioLeft">
+                                <input class="mgr mgr-success mgr-lg" id="energyBallButton" type="radio" value="energyBall"
+                                    name="activityLevel">
+                            </div>
+                            <div class="col-1">
+                            </div>
+                        </div>
+
+                        <div class="row no-gutters">
+
+                            <div class="col-1 d-md-none"></div>
+
+                            <div class="col-2 col-md-2 regCaption couchPotato">
                                 couch potato
                             </div>
-                            <div class="col-3 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption somewhatActive">
                                 somewhat active
                             </div>
-                            <div class="col-2 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption active">
                                 active
                             </div>
-                            <div class="col-3 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption veryActive">
                                 very active
                             </div>
-                            <div class="col-2 regCaption" id="activityLevel">
+                            <div class="col-2 col-md-2 regCaption energyBall">
                                 energy ball
                             </div>
+
                         </div>
-                        <div class="row">
-                            <div class="col-2 OrangeCaptionSmall">
-                                under 30min
+
+                        <div class="row no-gutters">
+
+                            <div class="col-1 d-md-none"></div>
+
+                            <div class="col-2 col-md-2 OrangeCaptionSmall couchPotato">
+                                <div>under 30min</div>
+                                <div>of activity</div>
+
                             </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                0.5 to 1hr
+                            <div class="col-2 col-md-2 OrangeCaptionSmall somewhatActive">
+
+                                <div>0.5 to 1hr</div>
+                                <div>of activity</div>
                             </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                1 to 2hr
+                            <div class="col-2 col-md-2 OrangeCaptionSmall active">
+
+                                <div>1 to 2hr</div>
+                                <div>of activity</div>
+
+
                             </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                2 to 3hr
+                            <div class="col-2 col-md-2 OrangeCaptionSmall veryActive">
+                                <div>2 to 3hr</div>
+                                <div>of activity</div>
+
                             </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                over 3hr
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-2 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-3 OrangeCaptionSmall">
-                                walks/day
-                            </div>
-                            <div class="col-2 OrangeCaptionSmall">
-                                walks/day
+                            <div class="col-2 col-md-2 OrangeCaptionSmall energyBall">
+
+                                <div>over 3hr</div>
+                                <div>of activity</div>
+
                             </div>
                         </div>
                     </div>
@@ -345,44 +509,62 @@
                 <div class="row pt-3 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">How much treats does your pet get?</div>
                     <div class="col-12 col-md-8">
-                        <div class="row">
-                            <div class="col-4 col-md-3">
-                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel">
-                                    No treats
-                                </label>
+                        <div class="row no-gutters">
+                            <div class="col-1">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="noTreats" name="treatLevel">
                             </div>
-                            <div class="col-4 col-md-3">
-                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel"
-                                        checked>
-                                    Some treats
-                                </label>
+                            <div class="col-3 col-md-2 treatCaption">
+                                No treats
                             </div>
-                            <div class="col-4">
-                                <label class="radio toPullLeft pt-2" style="white-space:nowrap"><input
-                                        class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="treatLevel">
-                                    Lots of treats
-                                </label>
+                            <div class="col-1">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="someTreats" name="treatLevel"
+                                    checked>
+                            </div>
+                            <div class="col-3 col-md-2 treatCaption">
+                                Some treats
+                            </div>
+                            <div class="col-1">
+                                <input class="mgr mgr-success mgr-lg" type="radio" value="lotsOfTreats"
+                                    name="treatLevel">
+                            </div>
+                            <div class="col-3 col-md-2 treatCaption">
+                                Lots of treats
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row pt-1 pb-1 page3">
+                <div class="row mt-3 pt-1 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">Is your pet neutered?</div>
-                    <div class="col-6 col-md-2">
-                        <label class="radio toPullLeft pt-2" id="yes" style="white-space:nowrap"><input
-                                class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag" checked>
-                            <span class="pl-2">Yes</span>
-                        </label>
+
+                    <div class="col-12 col-md-8">
+
+                        <div class="row no-gutters">
+
+                            <div class="col-2 d-md-none">
+                            </div>
+
+                            <div class="col-1">
+                                <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" value="neutered"
+                                    name="neuteredFlag" checked>
+                            </div>
+
+                            <div class="col-3 col-md-2 treatCaption">
+                                Yes
+                            </div>
+
+                            <div class="col-1">
+                                <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" value="notNeutered"
+                                    name="neuteredFlag">
+                            </div>
+
+                            <div class="col-3 col-md-2 treatCaption">
+                                No
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-6 col-md-2">
-                        <label class="radio toPullLeft pt-2" id="no" style="white-space:nowrap"><input
-                                class="toAlignCenter mgr mgr-success mgr-lg" type="radio" name="neuteredFlag">
-                            <span class="pl-2">No</span>
-                        </label>
-                    </div>
+
                 </div>
+
                 <div class="row pt-1 pb-1 page3">
                     <div class="col-12 p-3">
                         <button onclick="document.location='index2.html'" type="button" class="nextButton">Next</button>

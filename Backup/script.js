@@ -8,13 +8,39 @@ var changeName = document.getElementsByClassName("changeName");
 //Declaring the elements where the user needs to input value
 var petName = document.getElementById("petName");
 var breedSelector = document.getElementById("breedSelector");
+var day = document.getElementById("day");
 var month = document.getElementById("month");
 var year = document.getElementById("year");
 var weightSelector = document.getElementById("weightSelector");
 
+//Declaring the sections to show/hide
+var couchPotato = document.getElementsByClassName("couchPotato");
+var somewhatActive = document.getElementsByClassName("somewhatActive");
+var active = document.getElementsByClassName("active");
+var veryActive = document.getElementsByClassName("veryActive");
+var energyBall = document.getElementsByClassName("energyBall");
+
+var sections = [couchPotato, somewhatActive, active, veryActive, energyBall];
+
+//Declaring the activity level radio buttons
+var couchPotatoButton = document.getElementById("couchPotatoButton");
+var somewhatActiveButton = document.getElementById("somewhatActiveButton");
+var activeButton = document.getElementById("activeButton");
+var veryActiveButton = document.getElementById("veryActiveButton");
+var energyBallButton = document.getElementById("energyBallButton");
+
+
+//Adding the corresponding event listeners
+couchPotatoButton.addEventListener('click',()=>showSection(couchPotato));
+somewhatActiveButton.addEventListener('click',()=>showSection(somewhatActive));
+activeButton.addEventListener('click',()=>showSection(active));
+veryActiveButton.addEventListener('click',()=>showSection(veryActive));
+energyBallButton.addEventListener('click',()=>showSection(energyBall));
+
 //Declaring the error message for each input element
 petName.setCustomValidity("Please enter your pet's name");
 breedSelector.setCustomValidity('Please select a breed!');
+day.setCustomValidity('Day must be between 1 and 31!');
 month.setCustomValidity('Please enter a month!');
 year.setCustomValidity('Please enter a year');
 weightSelector.setCustomValidity("Please enter your pet's weight!");
@@ -131,16 +157,38 @@ async function animateRemoveFirst() {
 //This function will validate input, animate the page and transition to the third page
 async function animateRemoveSecond() {
 
-  if (month.value == "") {  //Check if the user is entering a valid month, range check will be done from the HTML
+/*   if (day.value < 1 || day.value > 31) {  //Check if the user is entering a valid month, range check will be done from the JS
+
+    day.reportValidity();
+  }
+  else if (month.value == "") { //Check if the user is entering a valid month, range check will be done from the HTML
 
     month.reportValidity();
-  }
-  else if (year.value == "") { //Check if the user is entering a valid year, range check will be done from the HTML
+
+  }else if (year.value == "") { //Check if the user is entering a valid year, range check will be done from the HTML
 
     year.reportValidity();
 
+  }  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid weight
+
+    weightSelector.reportValidity();
+
   }
-  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid year
+  else {  //If all input is valid, proceed to the last page
+    animateSecondPage();
+    const slow = await resolveAfterXMilliSecond(650)
+    hideSecondPage();
+  } */
+
+ if (month.value == "selectMonth") { //Check if the user is entering a valid month, range check will be done from the HTML
+
+    month.reportValidity();
+
+  }else if (year.value == "selectYear") { //Check if the user is entering a valid year, range check will be done from the HTML
+
+    year.reportValidity();
+
+  }  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid weight
 
     weightSelector.reportValidity();
 
@@ -151,6 +199,27 @@ async function animateRemoveSecond() {
     hideSecondPage();
   }
 
+
+}
+
+function showSection(element){
+
+  for(var i = 0; i < sections.length; i++){
+
+    for(var j = 0; j < element.length; j++){
+      if(sections[i] == element){
+      
+        sections[i][j].classList.remove("hide");
+        sections[i][j].classList.add("show");
+      }
+      else{
+        sections[i][j].classList.remove("show");
+        sections[i][j].classList.add("hide");
+  
+      }
+
+    }
+  }
 
 }
 
