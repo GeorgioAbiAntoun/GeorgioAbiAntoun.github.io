@@ -26,7 +26,7 @@
 
         <form>
             <div class="container pt-1">
-                <div class="row pt-1 pb-1 page1">
+                <div class="row page1">
                     <div class="col-md-4 desc"><span>I have a</span></div>
                     <div class="col-3 col-md-2 toAlignCenter"><img src="images/dog.svg" class="img-fluid" alt="dog">
                     </div>
@@ -51,18 +51,18 @@
                     </div>
                 </div>
 
-                <div class="row pt-1 pb-1 page1">
+                <div class="row page1">
                     <div class="col-12 col-md-4 desc">Your pet's name</div>
                     <div class="col-12 col-md-6 p-2">
-                        <input class="form-control" id="petName" type="text" placeholder=" Pet's Name" maxlength="12">
+                        <input class="form-control form-control-lg" id="petName" type="text" placeholder=" Pet's Name" maxlength="12">
                     </div>
                 </div>
 
-                <div class="row pt-1 pb-1 page1">
+                <div class="row page1">
                     <div class="col-12 col-md-4 desc">Breed</div>
                     <div class="col-12 col-md-6 p-2">
-                        <select class="form-control" id="breedSelector">
-                            <option selected disabled value="SelectBreed">Select Breed</option>
+                        <select class="form-control form-control-lg" id="breedSelector">
+                            <option selected value="SelectBreed">Select Breed</option>
                             <option value="MixedBreed">Mixed Breed</option>
                             <option value="GoldenRetriever">Golden Retriever</option>
                             <option value="Husky">Husky</option>
@@ -156,14 +156,14 @@
                         <button onclick="animateRemoveFirst()" id="next1" type="button" class="nextButton">Next</button>
                     </div>
                 </div>
-                <div class="row pt-5 pb-1 page2">
+                <div class="row pt-3 page2">
                     <div class="col-12 col-md-4 desc changeName">Your pet's birthday</div>
                     <div class="col-4 col-md-2">
                         <div class="row">
-                            <div class="col-12 pl-2">
+                            <div class="col-12 p-2">
 
-                                <select class="form-control" id="day">
-                                    <option value="day">Day</option>
+                                <select class="form-control form-control-lg" id="day">
+                                    <option value="selectDay">Day</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -205,9 +205,9 @@
                     </div>
                     <div class="col-4 col-md-2">
                         <div class="row">
-                            <div class="col-12 pl-2">
+                            <div class="col-12 p-2">
 
-                                <select class="form-control" id="month">
+                                <select class="form-control form-control-lg" id="month">
                                     <option value="selectMonth">Month</option>
                                     <option value="1">January</option>
                                     <option value="2">February</option>
@@ -231,9 +231,9 @@
                     </div>
                     <div class="col-4 col-md-2">
                         <div class="row">
-                            <div class="col-12 pl-0 yearField">
+                            <div class="col-12 p-2 yearField">
 
-                                <select class="form-control" id="year">
+                                <select class="form-control form-control-lg" id="year">
                                     <option value="selectYear">Year</option>
                                     <option value="2021">2021</option>
                                     <option value="2020">2020</option>
@@ -276,11 +276,11 @@
 
                     </div>
                 </div>
-                <div class="row pt-1 pb-1 page2">
+                <div class="row page2">
                     <div class="col-12 col-md-4 desc changeName">What is your pet's weight?</div>
                     <div class="col-12 col-md-6 p-2">
 
-                        <select class="form-control" id="weightSelector">
+                        <select class="form-control form-control-lg" id="weightSelector">
                             <option value="WeightInKgs">Weight in Kgs</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -365,17 +365,17 @@
                         </select>
                     </div>
                 </div>
-                <div class="row pt-1 pb-1 page2">
+                <div class="row page2">
                     <div class="col-12 col-md-4 desc changeName">Your pet's weight condition</div>
                     <div class="col-12 col-md-6 imageSelectorWeightCondition pr-0">
                         <div class="row no-gutters">
-                            <div class="col-4 col-md-4">
+                            <div class="col-4 col-md-4 toAlignCenter">
                                 <img src="images/weight_skinny.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-4 col-md-4">
+                            <div class="col-4 col-md-4 toAlignCenter">
                                 <img src="images/weight_justright.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-4 col-md-4">
+                            <div class="col-4 col-md-4 toAlignCenter">
                                 <img src="images/weight_chubby.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
@@ -446,29 +446,27 @@
                         <button onclick="animateRemoveSecond()" type="button" class="nextButton">Next</button>
                     </div>
                 </div>
-                <div class="row pt-1 pb-1 page3">
+                <div class="row page3">
                     <div class="col-12 col-md-4 desc changeName">Your Pet's activity level</div>
-                    <div class="col-12 col-md-7">
-
-
+                    <div class="col-12 col-md-8 imageSelectorActivityLevel">
 
                         <div class="row no-gutters">
 
                             <div class="col-1 d-md-none"></div>
 
-                            <div class="col-2 col-md-2">
+                            <div class="col-2 col-md-2 toAlignCenter">
                                 <img src="images/activity_couchpotato.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-2 col-md-2">
+                            <div class="col-2 col-md-2 toAlignCenter">
                                 <img src="images/activity_somewhatactive.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-2 col-md-2">
+                            <div class="col-2 col-md-2 toAlignCenter">
                                 <img src="images/activity_active.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-2 col-md-2">
+                            <div class="col-2 col-md-2 toAlignCenter">
                                 <img src="images/activity_veryactive.svg" class="img-fluid" alt="dog">
                             </div>
-                            <div class="col-2 col-md-2">
+                            <div class="col-2 col-md-2 toAlignCenter">
                                 <img src="images/activity_energyball.svg" class="img-fluid" alt="dog">
                             </div>
                         </div>
@@ -574,23 +572,22 @@
                 <div class="row pt-3 pb-1 page3">
                     <div class="col-12 col-md-4 desc changeName">How much treats does your pet get?</div>
                     <div class="col-12 col-md-8">
-                        <div class="row no-gutters">
+                        <div class="row">
 
-                            <div class="col-1 d-md-none">
-                            </div>
+                           
 
-                            <div class="col-4 col-md-3 treatCaption">
+                            <div class="col-4 col-md-auto treatCaption">
                                 <input class="mgr mgr-success mgr-lg" type="radio" value="noTreats" name="treatLevel">
                                 No treats
                             </div>
 
-                            <div class="col-4 col-md-3 treatCaption">
+                            <div class="col-4 col-md-auto treatCaption">
                                 <input class="mgr mgr-success mgr-lg" type="radio" value="someTreats" name="treatLevel"
                                     checked>
                                 Some treats
                             </div>
 
-                            <div class="col-3 col-md-3 treatCaption">
+                            <div class="col-3 col-md-auto treatCaption">
                                 <input class="mgr mgr-success mgr-lg" type="radio" value="lotsOfTreats"
                                     name="treatLevel">
                                 Lots of treats
@@ -608,13 +605,13 @@
                             <div class="col-3 d-md-none">
                             </div>
 
-                            <div class="col-4 col-md-3 treatCaption">
+                            <div class="col-4 col-md-1 treatCaption">
                                 <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" value="neutered"
                                     name="neuteredFlag" checked>
                                 Yes
                             </div>
 
-                            <div class="col-4 col-md-3 treatCaption">
+                            <div class="col-4 col-md-1 treatCaption">
                                 <input class="toAlignCenter mgr mgr-success mgr-lg" type="radio" value="notNeutered"
                                     name="neuteredFlag">
                                 No

@@ -40,7 +40,7 @@ energyBallButton.addEventListener('click',()=>showSection(energyBall));
 //Declaring the error message for each input element
 petName.setCustomValidity("Please enter your pet's name");
 breedSelector.setCustomValidity('Please select a breed!');
-day.setCustomValidity('Day must be between 1 and 31!');
+day.setCustomValidity('Please enter a day!');
 month.setCustomValidity('Please enter a month!');
 year.setCustomValidity('Please enter a year');
 weightSelector.setCustomValidity("Please enter your pet's weight!");
@@ -148,7 +148,7 @@ async function animateRemoveFirst() {
     }
 
     animateFirstPage();
-    const slow = await resolveAfterXMilliSecond(650)
+    const slow = await resolveAfterXMilliSecond(100)
     hideFirstPage();
   }
 
@@ -157,30 +157,7 @@ async function animateRemoveFirst() {
 //This function will validate input, animate the page and transition to the third page
 async function animateRemoveSecond() {
 
-/*   if (day.value < 1 || day.value > 31) {  //Check if the user is entering a valid month, range check will be done from the JS
-
-    day.reportValidity();
-  }
-  else if (month.value == "") { //Check if the user is entering a valid month, range check will be done from the HTML
-
-    month.reportValidity();
-
-  }else if (year.value == "") { //Check if the user is entering a valid year, range check will be done from the HTML
-
-    year.reportValidity();
-
-  }  else if (weightSelector.value == "WeightInKgs") { //This is to force the user to enter a valid weight
-
-    weightSelector.reportValidity();
-
-  }
-  else {  //If all input is valid, proceed to the last page
-    animateSecondPage();
-    const slow = await resolveAfterXMilliSecond(650)
-    hideSecondPage();
-  } */
-
- if (month.value == "selectMonth") { //Check if the user is entering a valid month, range check will be done from the HTML
+  if (month.value == "selectMonth") { //Check if the user is entering a valid month, range check will be done from the HTML
 
     month.reportValidity();
 
@@ -193,9 +170,9 @@ async function animateRemoveSecond() {
     weightSelector.reportValidity();
 
   }
-  else {  //If all input is valid, proceed to the last page
+  else {  //If all inputs are valid, proceed to the last page
     animateSecondPage();
-    const slow = await resolveAfterXMilliSecond(650)
+    const slow = await resolveAfterXMilliSecond(100)
     hideSecondPage();
   }
 
@@ -223,9 +200,35 @@ function showSection(element){
 
 }
 
+//Make dropdown input grey until that a user selects a valid option
+var style = document.createElement('style');
+
+var breedGrey = 'select[id=breedSelector]{color: #899197 !important;}';
+var dayGrey = ' select[id=day] {color: #899197 !important;} ';
+var monthGrey = ' select[id=month] {color: #899197 !important;} ';
+var yearGrey = ' select[id=year] {color: #899197 !important;} ';
+var weightGrey = ' select[id=weightSelector] {color: #899197 !important;} ';
+
+style.innerHTML = breedGrey+dayGrey+monthGrey+yearGrey+weightGrey;
+var ref = document.querySelector('script');
+ref.parentNode.insertBefore(style, ref);
+
+
 //Hide/show the breed size selector if the user selects Mixed Breed or not
 $(document).ready(function () {
   $('#breedSelector').on('change', function () {
+
+    if(this.value=='SelectBreed'){
+      if(!(style.innerHTML.includes(breedGrey))){
+        style.innerHTML = style.innerHTML + breedGrey;
+      }      
+    } else {
+
+      if(style.innerHTML.includes(breedGrey)){
+        style.innerHTML=style.innerHTML.replace(breedGrey,'');
+      }
+      
+    }
     if (this.value == 'MixedBreed') {
       document.getElementById("breedSize").style.display = "flex";
     }
@@ -233,6 +236,61 @@ $(document).ready(function () {
       document.getElementById("breedSize").style.display = "none";
     }
   });
+
+  $('#day').on('change', function () {
+
+    if(this.value=='selectDay'){
+      if(!(style.innerHTML.includes(dayGrey))){
+        style.innerHTML = style.innerHTML + dayGrey;
+      }      
+    } else {
+      if(style.innerHTML.includes(dayGrey)){
+        style.innerHTML=style.innerHTML.replace(dayGrey,'');
+      } 
+    }
+  });
+
+  $('#month').on('change', function () {
+
+    if(this.value=='selectMonth'){
+      if(!(style.innerHTML.includes(monthGrey))){
+        style.innerHTML = style.innerHTML + monthGrey;
+      }      
+    } else {
+      if(style.innerHTML.includes(monthGrey)){
+        style.innerHTML=style.innerHTML.replace(monthGrey,'');
+      } 
+    }
+  });
+
+  $('#year').on('change', function () {
+
+    if(this.value=='selectYear'){
+      if(!(style.innerHTML.includes(yearGrey))){
+        style.innerHTML = style.innerHTML + yearGrey;
+      }      
+    } else {
+      if(style.innerHTML.includes(yearGrey)){
+        style.innerHTML=style.innerHTML.replace(yearGrey,'');
+      } 
+    }
+  });
+
+  $('#weightSelector').on('change', function () {
+
+    if(this.value=='WeightInKgs'){
+      if(!(style.innerHTML.includes(weightGrey))){
+        style.innerHTML = style.innerHTML + weightGrey;
+      }      
+    } else {
+      if(style.innerHTML.includes(weightGrey)){
+        style.innerHTML=style.innerHTML.replace(weightGrey,'');
+      } 
+    }
+  });
+
+  
+
 });
 
 //Hide placeholder when user clicks on input field

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" x="0px" y="0px" viewBox="598.31 231.549 611.831 572.636" style="enable-background:new 0 0 3000 1080;" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" x="0px" y="0px" viewBox="670.207 452.668 466.002 337.951" style="enable-background:new 0 0 3000 1080;" xmlns="http://www.w3.org/2000/svg">
   <style type="text/css">
 	.st0{fill:#FFFFFF;}
 	.st1{fill:#F05848;}
 </style>
-  <g id="Layer_1">
+  <g id="Layer_1" transform="matrix(1, 0, 0, 1, 1, -6)">
     <g>
       <g transform="matrix(1, 0, 0, 1, 526.187683, -31.77504)">
         <path class="st0" d="M213.8,593.7c28.2-0.5,315.8-5.2,321,0c5.2,5.2,47.7,94.4,51.5,104.1s8.7,99.8,0,105.7s-381,6.8-418.6-8.7 c-9.2-3.8-11.9-109.1-10.8-118.5C158,666.9,207.3,593.8,213.8,593.7z"/>
